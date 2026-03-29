@@ -43,4 +43,5 @@ DOMAIN-SUFFIX,tendawifi.com
 DOMAIN-SUFFIX,zte.home
 DOMAIN-SUFFIX,tplogin.cn
 DOMAIN-SUFFIX,wifi.cmcc
-DOMAIN-SUFFIX,cdnfhnfile.115cdn.net
+DOMAIN-SUFFIX,115cdn.net
+DOMAIN-KEYWORD,115cdn
