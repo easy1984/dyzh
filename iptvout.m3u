@@ -1,0 +1,69 @@
+#EXTM3U x-tvg-url="http://tvbox.840120.xyz:36400/iptv/epg.xml" 
+#EXTINF:-1 tvg-chno="" tvg-id="71fbab718c1da44bd5f3cf930614e2db" tvg-name="CCTV1" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvQ0NUVi9DQ1RWMS5wbmc/CCTV1.png" group-title="中央卫视",CCTV1
+http://tvbox.840120.xyz:36400/live/admin/iptv/69.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="ae71b1979870a683a4a83c61399ae5ff" tvg-name="CCTV2" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvQ0NUVi9DQ1RWMi5wbmc/CCTV2.png" group-title="中央卫视",CCTV2
+http://tvbox.840120.xyz:36400/live/admin/iptv/70.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="42f168e5d619f4c20d364385ff8b0222" tvg-name="CCTV3" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvQ0NUVi9DQ1RWMy5wbmc/CCTV3.png" group-title="中央卫视",CCTV3
+http://tvbox.840120.xyz:36400/live/admin/iptv/71.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="d65658fb245355588fd3a3e4e30e51d0" tvg-name="CCTV4" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvQ0NUVi9DQ1RWNC5wbmc/CCTV4.png" group-title="中央卫视",CCTV4
+http://tvbox.840120.xyz:36400/live/admin/iptv/72.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="9e27bd20694c5647a7cf73e12aac6a0f" tvg-name="CCTV5" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvQ0NUVi9DQ1RWNS5wbmc/CCTV5.png" group-title="中央卫视",CCTV5
+http://tvbox.840120.xyz:36400/live/admin/iptv/73.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="7bea27a2459e833512a25bf959a10875" tvg-name="CCTV6" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvQ0NUVi9DQ1RWNi5wbmc/CCTV6.png" group-title="中央卫视",CCTV6
+http://tvbox.840120.xyz:36400/live/admin/iptv/74.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="304e0c21ac0f63a735280a29b0969eee" tvg-name="CCTV7" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvQ0NUVi9DQ1RWNy5wbmc/CCTV7.png" group-title="中央卫视",CCTV7
+http://tvbox.840120.xyz:36400/live/admin/iptv/75.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="4b31ccd717997490073a701069e46001" tvg-name="CCTV8" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvQ0NUVi9DQ1RWOC5wbmc/CCTV8.png" group-title="中央卫视",CCTV8
+http://tvbox.840120.xyz:36400/live/admin/iptv/76.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="ceaa289deab3292b3cdf0bad40e6fc09" tvg-name="CCTV9" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvQ0NUVi9DQ1RWOS5wbmc/CCTV9.png" group-title="中央卫视",CCTV9
+http://tvbox.840120.xyz:36400/live/admin/iptv/77.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="9b9e8ed966055a13c0927535f318b800" tvg-name="CCTV10" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvQ0NUVi9DQ1RWMTAucG5n/CCTV10.png" group-title="中央卫视",CCTV10
+http://tvbox.840120.xyz:36400/live/admin/iptv/78.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="e2849786fb99480ffc6eb7773dba167a" tvg-name="东方卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvZG9uZ2ZhbmcucG5n/dongfang.png" group-title="地方卫视",东方卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/82.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="55d593ecdf20b201871d4c281c2ba74e" tvg-name="云南卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MveXVubmFuLnBuZw/yunnan.png" group-title="地方卫视",云南卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/92.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="6b991cc56ec94f4a4a45297ba5e68265" tvg-name="北京卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvYmVpamluZy5wbmc/beijing.png" group-title="地方卫视",北京卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/80.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="4132b3093c9a2044953ae636c922d7db" tvg-name="吉林卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvamlsaW4ucG5n/jilin.png" group-title="地方卫视",吉林卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/88.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="7014a447bcaf0ef6964803a15873a6af" tvg-name="四川卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3Mvc2ljaHVhbi5wbmc/sichuan.png" group-title="地方卫视",四川卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/95.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="6aefff285d8ca2d8f659ad2a2d512a17" tvg-name="天津卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvdGlhbmppbi5wbmc/tianjin.png" group-title="地方卫视",天津卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/94.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="dce8391dc9238ddec55334c4087b23e3" tvg-name="安徽卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvYW5odWkucG5n/anhui.png" group-title="地方卫视",安徽卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/86.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="90f42cbd8fa9fc58199cd8c837029872" tvg-name="山东卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3Mvc2hhbmRvbmcucG5n/shandong.png" group-title="地方卫视",山东卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/87.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="1d71741d25fc75be9509d3b6c72e01ee" tvg-name="广东卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvZ3Vhbmdkb25nLnBuZw/guangdong.png" group-title="地方卫视",广东卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/91.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="c44ba95417fe8b4659de12cf2d0dacb0" tvg-name="广西卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvZ3Vhbmd4aS5wbmc/guangxi.png" group-title="地方卫视",广西卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/99.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="2e2dffa6bb337c52d05cef1c5051b3cd" tvg-name="江苏卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvamlhbmdzdS5wbmc/jiangsu.png" group-title="地方卫视",江苏卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/81.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="2f4f955ae699f1e45cf1f771a556fcee" tvg-name="河北卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvaGViZWkucG5n/hebei.png" group-title="地方卫视",河北卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/97.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="8dce33d386e4d1579cfaa2710b48a5ad" tvg-name="河南卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvaGVuYW4ucG5n/henan.png" group-title="地方卫视",河南卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/96.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="e474e896cf4ee42f15d00d7d350091ca" tvg-name="浙江卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvemhlamlhbmcucG5n/zhejiang.png" group-title="地方卫视",浙江卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/83.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="8ae8fd33776b31ac6d5560bc747fbd98" tvg-name="深圳卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3Mvc2hlbnpoZW4ucG5n/shenzhen.png" group-title="地方卫视",深圳卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/84.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="c1f8d433c2754347bf8439c6c997e183" tvg-name="湖北卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvaHViZWkucG5n/hubei.png" group-title="地方卫视",湖北卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/89.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="3cd588eda59eaaa5708fbe43b0f74a1b" tvg-name="湖南卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvaHVuYW4ucG5n/hunan.png" group-title="地方卫视",湖南卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/85.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="7505843dfc810d865f40780307fb8479" tvg-name="贵州卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvZ3VpemhvdS5wbmc/guizhou.png" group-title="地方卫视",贵州卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/93.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="dde45111f48d25d8586b79a5daa0d2d0" tvg-name="辽宁卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvbGlhb25pbmcucG5n/liaoning.png" group-title="地方卫视",辽宁卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/79.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="d02fd86c8ce3520f19930f9f49184102" tvg-name="重庆卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvY2hvbmdxaW5nLnBuZw/chongqing.png" group-title="地方卫视",重庆卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/98.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="89161032d5cdbf5c572d7428cff71fcf" tvg-name="黑龙江卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvaGVpbG9uZ2ppYW5nLnBuZw/heilongjiang.png" group-title="地方卫视",黑龙江卫视
+http://tvbox.840120.xyz:36400/live/admin/iptv/90.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="9fac4cd2688f03bea0217e6ae8f70ed9" tvg-name="凤凰中文" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvZ3QvZmVuZ2h1YW5nemhvbmd3ZW4ucG5n/fenghuangzhongwen.png" group-title="香港卫视",凤凰中文
+http://r.jdshipin.com/cCCzW
+#EXTINF:-1 tvg-chno="" tvg-id="80e4514a1d91ef6e199cacb9c40cbdab" tvg-name="凤凰资讯" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvZ3QvZmVuZ2h1YW5neml4dW4ucG5n/fenghuangzixun.png" group-title="香港卫视",凤凰资讯
+http://r.jdshipin.com/0Rp07
+#EXTINF:-1 tvg-chno="" tvg-id="94a27b0bfecc38f0a0f1b614ee092803" tvg-name="凤凰香港" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvZ3QvZmVuZ2h1YW5neGlhbmdnYW5nLnBuZw/fenghuangxianggang.png" group-title="香港卫视",凤凰香港
+http://r.jdshipin.com/yDoTN
