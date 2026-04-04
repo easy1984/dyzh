@@ -71,8 +71,6 @@ http://r.jdshipin.com/yDoTN
 https://tv.iill.top/4gtv/4gtv-4gtv009
 #EXTINF:-1 tvg-id="中視新聞" tvg-name="中視新聞" tvg-logo="https://epg.iill.top/logo/中視新聞.png" http-user-agent="okhttp/1.9.89" group-title="港台卫视",中視新聞
 https://tv.iill.top/4gtv/4gtv-4gtv074
-#EXTINF:-1 tvg-id="1481" tvg-name="台灣戲劇台" tvg-logo="https://epg.iill.top/logo/台灣戲劇台.png" http-user-agent="okhttp/1.9.89" group-title="港台卫视",台灣戲劇
-https://tv.iill.top/ofiii/litv-xinchuang22
 #EXTINF:-1 tvg-id="Channel 5" tvg-name="Channel 5" tvg-logo="https://epg.iill.top/logo/Channel5.png" group-title="港台卫视",Channel 5
 http://cdn6.163189.xyz/163189/ch5
 #EXTINF:-1 tvg-id="Channel 8" tvg-name="Channel 8" tvg-logo="https://epg.iill.top/logo/Channel8.png" group-title="港台卫视",Channel 8
