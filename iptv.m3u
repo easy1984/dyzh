@@ -61,9 +61,45 @@ http://ltcottcdnfh.ln.chinamobile.com/PLTV/11/224/3221227615/index.m3u8?rrsip=lt
 http://ltcottcdnfh.ln.chinamobile.com/PLTV/11/224/3221227618/index.m3u8?rrsip=ltcottcdnfh.ln.chinamobile.com&zoneoffset=0&servicetype=1&icpid=&limitflux=-1&limitdur=-1&tenantId=8601&accountinfo=%2C10500006445545%2C223.102.98.238%2C20260110024634%2CLNLW-H265-3500k-1080P-chongqingstv%2C10001004046892%2C-1%2C0%2C1%2C-1%2C%2C2%2CYDTV%2C%2C%2C2%2C%2C429376667%2CEND&GuardEncType=2&it=H4sIAAAAAAAAAE2OywrCMBRE_ybLkDQ-6iKriiBIFFrdyk16E4tpo0kr-Pe2pQuXM5wzTB_B4HEv7ZppwXK-YtyurBA7wxEF07k2fCeMJgnfKsiMGPC-6ZwK9aTdyuLOtxnNNpRTnuekmvYOHpxkM6qGVmNcwuiVGD-NQVknSz-QKDgX0UHfhI5ePHyv0S8IwWr51g3ek34KFaTnWJAHpCK0L4hYn4KbOWnBJyQvME9wqKDFP-8c6_HED6gKdZXsAAAA
 #EXTINF:-1 tvg-id="43" tvg-name="广西卫视" tvg-logo="http://epg.51zmt.top:8000/tb1/ws/guangxi.png" group-title="地方卫视",广西卫视
 http://ltcottcdnfh.ln.chinamobile.com/PLTV/11/224/3221227625/index.m3u8?rrsip=ltcottcdnfh.ln.chinamobile.com&zoneoffset=0&servicetype=1&icpid=&limitflux=-1&limitdur=-1&tenantId=8601&accountinfo=%2C10500006445545%2C223.102.132.229%2C20260110061314%2CLNLW-H265-3500k-1080P-guangxistv%2C10001004046892%2C-1%2C0%2C1%2C-1%2C%2C2%2CYDTV%2C%2C%2C2%2C%2C429376673%2CEND&GuardEncType=2&it=H4sIAAAAAAAAAE2OQQ6CMBREb9NlY0uluOhKY2Ji0AR0az7lUwmFYgsk3l4gLFzO5L3JDB40Xk5KSCEQOSZSxmKv8cAq4DouCiGjJEoSEvCTOsWJBmvrzqSuXLRndnwxySmPKaOMkXyZO1swareS6dgW6Lcwaxn6qdaoylDRCQIFYzwaGGrX0buF78PbDSGYb9e60VoyLCGH0MwFeUM4urYHj-XVmZVTFdiApAfdgMEUWvzzbr6cT_wARR_m3esAAAA
-#EXTINF:-1 tvg-id="141" tvg-name="凤凰中文" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/fenghuangzhongwen.png" group-title="香港卫视",凤凰中文
+#EXTINF:-1 tvg-id="141" tvg-name="凤凰中文" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/fenghuangzhongwen.png" group-title="港台卫视",凤凰中文
 http://r.jdshipin.com/cCCzW
-#EXTINF:-1 tvg-id="142" tvg-name="凤凰资讯" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/fenghuangzixun.png" group-title="香港卫视",凤凰资讯
+#EXTINF:-1 tvg-id="142" tvg-name="凤凰资讯" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/fenghuangzixun.png" group-title="港台卫视",凤凰资讯
 http://r.jdshipin.com/0Rp07
-#EXTINF:-1 tvg-id="143" tvg-name="凤凰香港" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/fenghuangxianggang.png" group-title="香港卫视",凤凰香港
+#EXTINF:-1 tvg-id="143" tvg-name="凤凰香港" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/fenghuangxianggang.png" group-title="港台卫视",凤凰香港
 http://r.jdshipin.com/yDoTN
+#EXTINF:-1 tvg-id="中天新聞台" tvg-name="中天新聞台" tvg-logo="https://epg.iill.top/logo/中天新聞台.png" http-user-agent="okhttp/1.9.89" group-title="港台卫视",中天新聞「4gTV」
+https://tv.iill.top/4gtv/4gtv-4gtv009
+#EXTINF:-1 tvg-id="中視新聞" tvg-name="中視新聞" tvg-logo="https://epg.iill.top/logo/中視新聞.png" http-user-agent="okhttp/1.9.89" group-title="港台卫视",中視新聞「4gTV」
+https://tv.iill.top/4gtv/4gtv-4gtv074
+#EXTINF:-1 tvg-id="八大精彩台" tvg-name="八大精彩台" tvg-logo="https://epg.iill.top/logo/八大精彩台.png" http-user-agent="okhttp/1.9.89" group-title="港台卫视",八大精彩「4gTV」
+https://tv.iill.top/4gtv/4gtv-4gtv034
+#EXTINF:-1 tvg-id="八大綜藝台" tvg-name="八大綜藝台" tvg-logo="https://epg.iill.top/logo/八大綜藝台.png" http-user-agent="okhttp/1.9.89" group-title="港台卫视",八大綜藝「4gTV」
+https://tv.iill.top/4gtv/4gtv-4gtv039
+#EXTINF:-1 tvg-id="Channel 5" tvg-name="Channel 5" tvg-logo="https://epg.iill.top/logo/Channel5.png" group-title="港台卫视",Channel 5
+http://cdn6.163189.xyz/163189/ch5
+#EXTINF:-1 tvg-id="Channel 8" tvg-name="Channel 8" tvg-logo="https://epg.iill.top/logo/Channel8.png" group-title="港台卫视",Channel 8
+http://cdn6.163189.xyz/163189/ch8
+#EXTINF:-1 tvg-id="Channel U" tvg-name="Channel U" tvg-logo="https://epg.iill.top/logo/ChannelU.png" group-title="港台卫视",Channel U
+http://cdn6.163189.xyz/163189/chu
+#EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://epg.iill.top/logo/翡翠台.png" group-title="港台卫视", 翡翠台「多音轨字幕」
+https://o11.163189.xyz/stream/tvb/fct/
+#EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://epg.iill.top/logo/明珠台.png" group-title="港台卫视", 明珠台「多音轨字幕」
+https://o11.163189.xyz/stream/tvb/mzt/
+#EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://epg.iill.top/logo/TVBPlus.png" group-title="港台卫视",TVB Plus「多音轨字幕」
+https://o11.163189.xyz/stream/tvb/tvbp/
+#EXTINF:-1 tvg-id="Red Bull TV" tvg-name="Red Bull TV" tvg-logo="https://epg.iill.top/logo/RedBull.png" group-title="欧美卫视",Red Bull TV
+http://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8
+#EXTINF:-1 tvg-id="BBC Earth" tvg-name="BBC Earth" tvg-logo="https://epg.iill.top/logo/BBC-Earth.png" group-title="欧美卫视",BBC Earth
+https://hls.iill.top/api/BBC-Earth/index.m3u8
+#EXTINF:-1 tvg-id="BBC Lifestyle" tvg-name="BBC Lifestyle" tvg-logo="https://epg.iill.top/logo/BBC-Lifestyle.png" group-title="欧美卫视",BBC Lifestyle
+https://hls.iill.top/api/BBC-Lifestyle/index.m3u8
+#EXTINF:-1 tvg-id="Discovery HD" tvg-name="Discovery HD" tvg-logo="https://epg.iill.top/logo/Discovery-Channel.png" group-title="欧美卫视",Discovery
+https://hls.iill.top/api/Discovery/index.m3u8
+#EXTINF:-1 tvg-id="HBO HD" tvg-name="HBO HD" tvg-logo="https://epg.iill.top/logo/HBO.png" group-title="欧美卫视",HBO
+https://hls.iill.top/api/HBO/index.m3u8
+#EXTINF:-1 tvg-id="HBO Hits HD" tvg-name="HBO Hits HD" tvg-logo="https://epg.iill.top/logo/HBO-Hits.png" group-title="欧美卫视",HBO Hits
+https://hls.iill.top/api/HBO-Hits/index.m3u8
+#EXTINF:-1 tvg-id="HBO Family HD" tvg-name="HBO Family HD" tvg-logo="https://epg.iill.top/logo/HBO-Family.png" group-title="欧美卫视",HBO Family
+https://hls.iill.top/api/HBO-Family/index.m3u8
+#EXTINF:-1 tvg-id="HBO Signature HD" tvg-name="HBO Signature HD" tvg-logo="https://epg.iill.top/logo/HBO-Signature.png" group-title="欧美卫视",HBO Signature
+https://hls.iill.top/api/HBO-Signature/index.m3u8
