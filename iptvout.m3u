@@ -79,3 +79,7 @@ http://tvbox.840120.xyz:36400/live/admin/iptv/152.m3u8
 http://tvbox.840120.xyz:36400/live/admin/iptv/154.m3u8
 #EXTINF:-1 tvg-chno="" tvg-id="281317129ab389dac17fa65df884dfa1" tvg-name="Red Bull TV" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cHM6Ly9lcGcuaWlsbC50b3AvbG9nby9SZWRCdWxsLnBuZw/RedBull.png" group-title="欧美卫视",Red Bull TV
 http://tvbox.840120.xyz:36400/live/admin/iptv/147.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="ee6f870a6f6aaf16612cbba0d772b694" tvg-name="BBC Earth" tvg-logo="http://192.168.1.105:36400/logo-proxy/aHR0cHM6Ly9lcGcuaWlsbC50b3AvbG9nby9CQkMtRWFydGgucG5n/BBC-Earth.png" group-title="欧美卫视",BBC Earth
+http://192.168.1.105:36400/live/admin/iptv/148.m3u8
+#EXTINF:-1 tvg-chno="" tvg-id="926fa5e6e9d999d64007ef196ba3df2c" tvg-name="BBC Lifestyle" tvg-logo="http://192.168.1.105:36400/logo-proxy/aHR0cHM6Ly9lcGcuaWlsbC50b3AvbG9nby9CQkMtTGlmZXN0eWxlLnBuZw/BBC-Lifestyle.png" group-title="欧美卫视",BBC Lifestyle
+http://192.168.1.105:36400/live/admin/iptv/149.m3u8
