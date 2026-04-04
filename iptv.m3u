@@ -77,25 +77,25 @@ http://cdn6.163189.xyz/163189/ch5
 http://cdn6.163189.xyz/163189/ch8
 #EXTINF:-1 tvg-id="Channel U" tvg-name="Channel U" tvg-logo="https://epg.iill.top/logo/ChannelU.png" group-title="港台卫视",Channel U
 http://cdn6.163189.xyz/163189/chu
-#EXTINF:-1 tvg-id="120" tvg-name="翡翠台" tvg-logo="https://epg.iill.top/logo/翡翠台.png" group-title="港台卫视", 翡翠台
+#EXTINF:-1 tvg-id="翡翠台" tvg-name="翡翠台" tvg-logo="https://epg.iill.top/logo/翡翠台.png" group-title="港台卫视", 翡翠台
 https://o11.163189.xyz/stream/tvb/fct/
-#EXTINF:-1 tvg-id="121" tvg-name="明珠台" tvg-logo="https://epg.iill.top/logo/明珠台.png" group-title="港台卫视", 明珠台
+#EXTINF:-1 tvg-id="明珠台" tvg-name="明珠台" tvg-logo="https://epg.iill.top/logo/明珠台.png" group-title="港台卫视", 明珠台
 https://o11.163189.xyz/stream/tvb/mzt/
-#EXTINF:-1 tvg-id="122" tvg-name="TVB Plus" tvg-logo="https://epg.iill.top/logo/TVBPlus.png" group-title="港台卫视",TVB Plus
+#EXTINF:-1 tvg-id="TVB Plus" tvg-name="TVB Plus" tvg-logo="https://epg.iill.top/logo/TVBPlus.png" group-title="港台卫视",TVB Plus
 https://o11.163189.xyz/stream/tvb/tvbp/
 #EXTINF:-1 tvg-id="Red Bull TV" tvg-name="Red Bull TV" tvg-logo="https://epg.iill.top/logo/RedBull.png" group-title="欧美卫视",Red Bull TV
 http://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_6660.m3u8
-#EXTINF:-1 tvg-id="1609" tvg-name="BBC Earth" tvg-logo="https://epg.iill.top/logo/BBC-Earth.png" group-title="欧美卫视",BBC Earth
+#EXTINF:-1 tvg-id="BBC Earth" tvg-name="BBC Earth" tvg-logo="https://epg.iill.top/logo/BBC-Earth.png" group-title="欧美卫视",BBC Earth
 https://hls.iill.top/api/BBC-Earth/index.m3u8
-#EXTINF:-1 tvg-id="1568" tvg-name="BBC Lifestyle" tvg-logo="https://epg.iill.top/logo/BBC-Lifestyle.png" group-title="欧美卫视",BBC Lifestyle
+#EXTINF:-1 tvg-id="BBC Lifestyle" tvg-name="BBC Lifestyle" tvg-logo="https://epg.iill.top/logo/BBC-Lifestyle.png" group-title="欧美卫视",BBC Lifestyle
 https://hls.iill.top/api/BBC-Lifestyle/index.m3u8
-#EXTINF:-1 tvg-id="1460" tvg-name="Discovery HD" tvg-logo="https://epg.iill.top/logo/Discovery-Channel.png" group-title="欧美卫视",Discovery
+#EXTINF:-1 tvg-id="Discovery HD" tvg-name="Discovery HD" tvg-logo="https://epg.iill.top/logo/Discovery-Channel.png" group-title="欧美卫视",Discovery
 https://hls.iill.top/api/Discovery/index.m3u8
-#EXTINF:-1 tvg-id="1573" tvg-name="HBO HD" tvg-logo="https://epg.iill.top/logo/HBO.png" group-title="欧美卫视",HBO
+#EXTINF:-1 tvg-id="HBO HD" tvg-name="HBO HD" tvg-logo="https://epg.iill.top/logo/HBO.png" group-title="欧美卫视",HBO
 https://hls.iill.top/api/HBO/index.m3u8
-#EXTINF:-1 tvg-id="1574" tvg-name="HBO Hits HD" tvg-logo="https://epg.iill.top/logo/HBO-Hits.png" group-title="欧美卫视",HBO Hits
+#EXTINF:-1 tvg-id="HBO Hits HD" tvg-name="HBO Hits HD" tvg-logo="https://epg.iill.top/logo/HBO-Hits.png" group-title="欧美卫视",HBO Hits
 https://hls.iill.top/api/HBO-Hits/index.m3u8
-#EXTINF:-1 tvg-id="1576" tvg-name="HBO Family HD" tvg-logo="https://epg.iill.top/logo/HBO-Family.png" group-title="欧美卫视",HBO Family
+#EXTINF:-1 tvg-id="HBO Family HD" tvg-name="HBO Family HD" tvg-logo="https://epg.iill.top/logo/HBO-Family.png" group-title="欧美卫视",HBO Family
 https://hls.iill.top/api/HBO-Family/index.m3u8
-#EXTINF:-1 tvg-id="1575" tvg-name="HBO Signature HD" tvg-logo="https://epg.iill.top/logo/HBO-Signature.png" group-title="欧美卫视",HBO Signature
+#EXTINF:-1 tvg-id="HBO Signature HD" tvg-name="HBO Signature HD" tvg-logo="https://epg.iill.top/logo/HBO-Signature.png" group-title="欧美卫视",HBO Signature
 https://hls.iill.top/api/HBO-Signature/index.m3u8
