@@ -99,3 +99,5 @@ https://hls.iill.top/api/HBO-Hits/index.m3u8
 https://hls.iill.top/api/HBO-Family/index.m3u8
 #EXTINF:-1 tvg-id="HBO Signature HD" tvg-name="HBO Signature HD" tvg-logo="https://epg.iill.top/logo/HBO-Signature.png" group-title="欧美卫视",HBO Signature
 https://hls.iill.top/api/HBO-Signature/index.m3u8
+#EXTINF:-1 tvg-id="国哥直播" tvg-name="HBO Signature HD" tvg-logo="https://epg.iill.top/logo/HBO-Signature.png" group-title="快手",国哥直播
+https://tx-origin.pull.yximgs.com/gifshow/W_6P1Bm8PIE_EcAvcHdL0.flv?txSecret=69ec0273ba96f0fabdf2754b8b880d60&txTime=69d3a386&stat=Ill4FyEzHZIHu%2F4mTrUHnJ5tSvw6szhs3LGtxiWT1PxFydnfq14vMnV8qSriXCcg&tsc=origin&highTraffic=1&oidc=watchmen&sidc=2756&no_script=1&fd=0&ss=s20&tfc_buyer=1&kabr_spts=-5000
