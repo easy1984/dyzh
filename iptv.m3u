@@ -67,10 +67,6 @@ http://r.jdshipin.com/cCCzW
 http://r.jdshipin.com/0Rp07
 #EXTINF:-1 tvg-id="143" tvg-name="凤凰香港" tvg-logo="http://epg.51zmt.top:8000/tb1/gt/fenghuangxianggang.png" group-title="港台卫视",凤凰香港
 http://r.jdshipin.com/yDoTN
-#EXTINF:-1 tvg-id="中天新聞台" tvg-name="中天新聞台" tvg-logo="https://epg.iill.top/logo/中天新聞台.png" http-user-agent="okhttp/1.9.89" group-title="港台卫视",中天新聞
-https://tv.iill.top/4gtv/4gtv-4gtv009
-#EXTINF:-1 tvg-id="中視新聞" tvg-name="中視新聞" tvg-logo="https://epg.iill.top/logo/中視新聞.png" http-user-agent="okhttp/1.9.89" group-title="港台卫视",中視新聞
-https://tv.iill.top/4gtv/4gtv-4gtv074
 #EXTINF:-1 tvg-id="Channel 5" tvg-name="Channel 5" tvg-logo="https://epg.iill.top/logo/Channel5.png" group-title="港台卫视",Channel 5
 http://cdn6.163189.xyz/163189/ch5
 #EXTINF:-1 tvg-id="Channel 8" tvg-name="Channel 8" tvg-logo="https://epg.iill.top/logo/Channel8.png" group-title="港台卫视",Channel 8
@@ -99,5 +95,3 @@ https://hls.iill.top/api/HBO-Hits/index.m3u8
 https://hls.iill.top/api/HBO-Family/index.m3u8
 #EXTINF:-1 tvg-id="HBO Signature HD" tvg-name="HBO Signature HD" tvg-logo="https://epg.iill.top/logo/HBO-Signature.png" group-title="欧美卫视",HBO Signature
 https://hls.iill.top/api/HBO-Signature/index.m3u8
-#EXTINF:-1 tvg-id="国哥直播" tvg-name="HBO Signature HD" tvg-logo="https://p3.ssl.qhimgs1.com/sdr/400__/t01a75fc47f54aed769.png" group-title="快手直播",国哥直播
-https://tx-origin.pull.yximgs.com/gifshow/W_6P1Bm8PIE_EcAvcHdL0.flv?txSecret=69ec0273ba96f0fabdf2754b8b880d60&txTime=69d3a386&stat=Ill4FyEzHZIHu%2F4mTrUHnJ5tSvw6szhs3LGtxiWT1PxFydnfq14vMnV8qSriXCcg&tsc=origin&highTraffic=1&oidc=watchmen&sidc=2756&no_script=1&fd=0&ss=s20&tfc_buyer=1&kabr_spts=-5000
