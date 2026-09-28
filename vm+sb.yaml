@@ -102,7 +102,6 @@ rules:
   - DOMAIN-KEYWORD,openai,🌍 国外媒体
   - DOMAIN-KEYWORD,anthropic,🌍 国外媒体
   - DOMAIN-KEYWORD,claude,🌍 国外媒体
-  - DOMAIN-KEYWORD,openai,🌍 国外媒体
   - RULE-SET,guowai (Domain),🌍 国外媒体
   - RULE-SET,LocalAreaNetwork (Domain),🎯 全球直连
   - RULE-SET,LocalAreaNetwork (IP-CIDR),🎯 全球直连,no-resolve
