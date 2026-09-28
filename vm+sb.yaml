@@ -1,0 +1,157 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+  - {name: server ShadowTLS, server: 103.204.174.123, port: 8884, cipher: 2022-blake3-aes-128-gcm, password: 30ytxxxtNQO77WO2jpE43g==, type: ss, udp: true}
+  - {name: server grpc-reality, server: 103.204.174.123, port: 8890, client-fingerprint: chrome, encryption: none, grpc-opts: {grpc-service-name: grpc}, network: grpc, reality-opts: {public-key: UrJNmeFG_XZthG4U2LBx3nvGStZQlkwNMoXzbngmChE, short-id: ""}, servername: addons.mozilla.org, tls: true, type: vless, udp: true, uuid: 85b3b0bb-6b61-4275-bf6c-f7bec938103e, xudp: true, skip-cert-verify: true}
+  - {name: server h2-reality, server: 103.204.174.123, port: 8889, client-fingerprint: chrome, encryption: none, h2-opts: {path: /}, network: h2, reality-opts: {public-key: UrJNmeFG_XZthG4U2LBx3nvGStZQlkwNMoXzbngmChE, short-id: ""}, servername: addons.mozilla.org, tls: true, type: vless, udp: true, uuid: 85b3b0bb-6b61-4275-bf6c-f7bec938103e, xudp: true, skip-cert-verify: true}
+  - {name: server shadowsocks, server: 103.204.174.123, port: 8885, cipher: 2022-blake3-aes-128-gcm, password: 30ytxxxtNQO77WO2jpE43g==, type: ss, udp: true}
+  - {name: server trojan, server: 103.204.174.123, port: 8886, client-fingerprint: chrome, password: 85b3b0bb-6b61-4275-bf6c-f7bec938103e, skip-cert-verify: true, sni: addons.mozilla.org, type: trojan, udp: true}
+  - {name: server tuic, server: 103.204.174.123, port: 8883, alpn: [h3], congestion-controller: bbr, password: 85b3b0bb-6b61-4275-bf6c-f7bec938103e, sni: addons.mozilla.org, type: tuic, udp: true, udp-relay-mode: native, uuid: 85b3b0bb-6b61-4275-bf6c-f7bec938103e, skip-cert-verify: true}
+  - {name: server vless-ws-tls, server: skk.moe, port: 443, client-fingerprint: chrome, encryption: none, network: ws, servername: rogers-readers-solely-agreement.trycloudflare.com, tls: true, type: vless, udp: true, uuid: 85b3b0bb-6b61-4275-bf6c-f7bec938103e, ws-opts: {early-data-header-name: Sec-WebSocket-Protocol, headers: {Host: rogers-readers-solely-agreement.trycloudflare.com, User-Agent: "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"}, max-early-data: 2560, path: /85b3b0bb-6b61-4275-bf6c-f7bec938103e-vless}, xudp: true, skip-cert-verify: true}
+  - {name: server vmess-ws, server: skk.moe, port: 80, alpn: [""], alterId: "0", cipher: auto, network: ws, skip-cert-verify: false, tls: false, type: vmess, udp: true, uuid: 85b3b0bb-6b61-4275-bf6c-f7bec938103e, ws-opts: {headers: {Host: rogers-readers-solely-agreement.trycloudflare.com}, path: /85b3b0bb-6b61-4275-bf6c-f7bec938103e-vmess}, xudp: true}
+  - {name: 高速Hysteria2-misaka, server: 91.213.174.63, port: 25582, down: "", fingerprint: "", obfs: "", obfs-password: "", password: a77793fe, skip-cert-verify: true, sni: www.bing.com, type: hysteria2, up: ""}
+  - {name: 高速server hysteria2, server: 103.204.174.123, port: 8882, down: 1000Mbps, fingerprint: "", obfs: "", obfs-password: "", password: 85b3b0bb-6b61-4275-bf6c-f7bec938103e, skip-cert-verify: true, sni: addons.mozilla.org, type: hysteria2, up: 200Mbps}
+  - {name: 高速server xtls-reality, server: 103.204.174.123, port: 8881, client-fingerprint: chrome, encryption: none, flow: xtls-rprx-vision, network: tcp, reality-opts: {public-key: UrJNmeFG_XZthG4U2LBx3nvGStZQlkwNMoXzbngmChE, short-id: ""}, servername: addons.mozilla.org, tls: true, type: vless, udp: true, uuid: 85b3b0bb-6b61-4275-bf6c-f7bec938103e, xudp: true, skip-cert-verify: true}
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - ♻️ 自动选择
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🚀 手动切换
+    type: select
+    proxies:
+      - server ShadowTLS
+      - server grpc-reality
+      - server h2-reality
+      - server shadowsocks
+      - server trojan
+      - server tuic
+      - server vless-ws-tls
+      - server vmess-ws
+      - 高速Hysteria2-misaka
+      - 高速server hysteria2
+      - 高速server xtls-reality
+  - name: ♻️ 自动选择
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 2
+    proxies:
+      - server ShadowTLS
+      - server grpc-reality
+      - server h2-reality
+      - server shadowsocks
+      - server trojan
+      - server tuic
+      - server vless-ws-tls
+      - server vmess-ws
+      - 高速Hysteria2-misaka
+      - 高速server hysteria2
+      - 高速server xtls-reality
+  - name: 🚀 高速节点
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 30
+    tolerance: 5000
+    proxies:
+      - 高速Hysteria2-misaka
+      - 高速server hysteria2
+      - 高速server xtls-reality
+  - name: 📹 油管视频
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 💬 电报消息
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - DIRECT
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 高速节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - DIRECT
+rules:
+  - DOMAIN-KEYWORD,ymawv,🌍 国外媒体
+  - DOMAIN-KEYWORD,openai,🌍 国外媒体
+  - DOMAIN-KEYWORD,anthropic,🌍 国外媒体
+  - DOMAIN-KEYWORD,claude,🌍 国外媒体
+  - DOMAIN-KEYWORD,openai,🌍 国外媒体
+  - RULE-SET,guowai (Domain),🌍 国外媒体
+  - RULE-SET,LocalAreaNetwork (Domain),🎯 全球直连
+  - RULE-SET,LocalAreaNetwork (IP-CIDR),🎯 全球直连,no-resolve
+  - DOMAIN-KEYWORD,youtube,📹 油管视频
+  - RULE-SET,YouTube (Domain),📹 油管视频
+  - RULE-SET,Telegram (Domain),💬 电报消息
+  - RULE-SET,Telegram (IP-CIDR),💬 电报消息,no-resolve
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
+rule-providers:
+  guowai (Domain):
+    type: http
+    behavior: domain
+    url: "https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vZWFzeTE5ODQvZHl6aC9yZWZzL2hlYWRzL21haW4vZ3Vvd2FpLmxpc3Q"
+    path: ./providers/guowai-domain-47440131eea8ed7b.yaml
+    format: yaml
+    interval: 86400
+  LocalAreaNetwork (Domain):
+    type: http
+    behavior: domain
+    url: "https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vZWFzeTE5ODQvZHl6aC9yZWZzL2hlYWRzL21haW4vTG9jYWxBcmVhTmV0d29yay5saXN0"
+    path: ./providers/LocalAreaNetwork-domain-082ed9f25b583947.yaml
+    format: yaml
+    interval: 86400
+  LocalAreaNetwork (IP-CIDR):
+    type: http
+    behavior: ipcidr
+    url: "https://api.asailor.org/getruleset?type=4&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vZWFzeTE5ODQvZHl6aC9yZWZzL2hlYWRzL21haW4vTG9jYWxBcmVhTmV0d29yay5saXN0"
+    path: ./providers/LocalAreaNetwork-ipcidr-082ed9f25b583947.yaml
+    format: yaml
+    interval: 86400
+  YouTube (Domain):
+    type: http
+    behavior: domain
+    url: "https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vQUNMNFNTUi9BQ0w0U1NSL21hc3Rlci9DbGFzaC9SdWxlc2V0L1lvdVR1YmUubGlzdA"
+    path: ./providers/YouTube-domain-c6e690ca7d43e310.yaml
+    format: yaml
+    interval: 86400
+  Telegram (Domain):
+    type: http
+    behavior: domain
+    url: "https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vQUNMNFNTUi9BQ0w0U1NSL21hc3Rlci9DbGFzaC9UZWxlZ3JhbS5saXN0"
+    path: ./providers/Telegram-domain-03cf5a4ad0298d51.yaml
+    format: yaml
+    interval: 86400
+  Telegram (IP-CIDR):
+    type: http
+    behavior: ipcidr
+    url: "https://api.asailor.org/getruleset?type=4&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vQUNMNFNTUi9BQ0w0U1NSL21hc3Rlci9DbGFzaC9UZWxlZ3JhbS5saXN0"
+    path: ./providers/Telegram-ipcidr-03cf5a4ad0298d51.yaml
+    format: yaml
+    interval: 86400
