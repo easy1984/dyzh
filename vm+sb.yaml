@@ -98,6 +98,7 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
 rules:
+  - DOMAIN,gemini.google.com,高速Hysteria2-misaka
   - DOMAIN-KEYWORD,ymawv,🌍 国外媒体
   - DOMAIN-KEYWORD,openai,🌍 国外媒体
   - DOMAIN-KEYWORD,anthropic,🌍 国外媒体
