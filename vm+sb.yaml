@@ -25,7 +25,7 @@ proxies:
   - {name: 🇯🇵 cloud vmess-ws, type: vmess, server: skk.moe, port: 80, uuid: 37ae331b-b277-4a65-a24e-daf3f4603700, udp: true, tls: false, alterId: 0, cipher: auto, network: ws, ws-opts: { path: "/37ae331b-b277-4a65-a24e-daf3f4603700-vmess", headers: {Host: routers-narrow-resist-trail.trycloudflare.com} }, smux: { enabled: true, protocol: 'h2mux', padding: true, max-connections: '8', min-streams: '16', statistic: true, only-tcp: false }, brutal-opts: { enabled: false, up: '1000 Mbps', down: '1000 Mbps' } }
   - {name: 🇯🇵 cloud vless-ws-tls, type: vless, server: skk.moe, port: 443, uuid: 37ae331b-b277-4a65-a24e-daf3f4603700, udp: true, tls: true, servername: routers-narrow-resist-trail.trycloudflare.com, network: ws, skip-cert-verify: false, ws-opts: { path: "/37ae331b-b277-4a65-a24e-daf3f4603700-vless", headers: {Host: routers-narrow-resist-trail.trycloudflare.com}, max-early-data: 2560, early-data-header-name: Sec-WebSocket-Protocol }, smux: { enabled: true, protocol: 'h2mux', padding: true, max-connections: '8', min-streams: '16', statistic: true, only-tcp: false }, brutal-opts: { enabled: false, up: '1000 Mbps', down: '1000 Mbps' } }
   - {name: 🇯🇵 cloud h2-reality, type: vless, server: 103.27.187.188, port: 8889, uuid: 37ae331b-b277-4a65-a24e-daf3f4603700, network: http, tls: true, servername: addons.mozilla.org, client-fingerprint: chrome, reality-opts: { public-key: J-brnkvXchOpbqjrs4W2SCw7ks_5GwTWpOrWfnyyOnE, short-id: "" }, smux: { enabled: true, protocol: 'h2mux', padding: true, max-connections: '8', min-streams: '16', statistic: true, only-tcp: false }, brutal-opts: { enabled: false, up: '1000 Mbps', down: '1000 Mbps' } }
-  - {name: 🇯🇵 cloud grpc-reality, type: vless, server: 103.27.187.188, port: 8890, uuid: 37ae331b-b277-4a65-a24e-daf3f4603700, network: grpc, tls: true, udp: true, flow: , client-fingerprint: chrome, servername: addons.mozilla.org, grpc-opts: {  grpc-service-name: "grpc" }, reality-opts: { public-key: J-brnkvXchOpbqjrs4W2SCw7ks_5GwTWpOrWfnyyOnE, short-id: "" }, smux: { enabled: true, protocol: 'h2mux', padding: true, max-connections: '8', min-streams: '16', statistic: true, only-tcp: false }, brutal-opts: { enabled: false, up: '1000 Mbps', down: '1000 Mbps' } }
+  - {name: 🇯🇵 cloud grpc-reality, type: vless, server: 103.27.187.188, port: 8890, uuid: 37ae331b-b277-4a65-a24e-daf3f4603700, network: grpc, tls: true, udp: true, client-fingerprint: chrome, servername: addons.mozilla.org, grpc-opts: {  grpc-service-name: "grpc" }, reality-opts: { public-key: J-brnkvXchOpbqjrs4W2SCw7ks_5GwTWpOrWfnyyOnE, short-id: "" }, smux: { enabled: true, protocol: 'h2mux', padding: true, max-connections: '8', min-streams: '16', statistic: true, only-tcp: false }, brutal-opts: { enabled: false, up: '1000 Mbps', down: '1000 Mbps' } }
   - {name: 🇯🇵 cloud anytls, type: anytls, server: 103.27.187.188, port: 8891, password: 37ae331b-b277-4a65-a24e-daf3f4603700, client-fingerprint: chrome, udp: true, idle-session-check-interval: 30, idle-session-timeout: 30, sni: addons.mozilla.org, skip-cert-verify: false, fingerprint: 6C:AF:25:C6:4C:7F:54:23:8F:61:D2:01:F7:33:8B:D5:F3:2D:E5:10:1A:FE:33:3C:84:6C:A3:B2:6E:73:7E:99 }
 proxy-groups:
   - name: 🚀 节点选择
@@ -49,6 +49,17 @@ proxy-groups:
       - 高速Hysteria2-misaka
       - 高速server hysteria2
       - 高速server xtls-reality
+      - 高速🇯🇵 cloud xtls-reality
+      - 高速🇯🇵 cloud hysteria2
+      - 🇯🇵 cloud tuic
+      - 🇯🇵 cloud ShadowTLS
+      - 🇯🇵 cloud shadowsocks
+      - 🇯🇵 cloud trojan
+      - 🇯🇵 cloud vmess-ws
+      - 🇯🇵 cloud vless-ws-tls
+      - 🇯🇵 cloud h2-reality
+      - 🇯🇵 cloud grpc-reality
+      - 🇯🇵 cloud anytls
   - name: ♻️ 自动选择
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -66,6 +77,17 @@ proxy-groups:
       - 高速Hysteria2-misaka
       - 高速server hysteria2
       - 高速server xtls-reality
+      - 高速🇯🇵 cloud xtls-reality
+      - 高速🇯🇵 cloud hysteria2
+      - 🇯🇵 cloud tuic
+      - 🇯🇵 cloud ShadowTLS
+      - 🇯🇵 cloud shadowsocks
+      - 🇯🇵 cloud trojan
+      - 🇯🇵 cloud vmess-ws
+      - 🇯🇵 cloud vless-ws-tls
+      - 🇯🇵 cloud h2-reality
+      - 🇯🇵 cloud grpc-reality
+      - 🇯🇵 cloud anytls
   - name: 🚀 高速节点
     type: url-test
     url: https://www.gstatic.com/generate_204
@@ -75,6 +97,9 @@ proxy-groups:
       - 高速Hysteria2-misaka
       - 高速server hysteria2
       - 高速server xtls-reality
+      - 高速🇯🇵 cloud xtls-reality
+      - 高速🇯🇵 cloud hysteria2
+      - 🇯🇵 cloud tuic
   - name: 📹 油管视频
     type: select
     proxies:
