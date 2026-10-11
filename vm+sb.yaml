@@ -28,7 +28,6 @@ proxies:
   - {name: 🇭🇰 VM4369BFAFA1A7355 vless-ws-tls, type: vless, server: skk.moe, port: 443, uuid: da8429b9-57fe-4b0c-b2eb-0e596c8e27f2, udp: true, tls: true, servername: speech-math-chancellor-sing.trycloudflare.com, network: ws, skip-cert-verify: false, ws-opts: { path: "/da8429b9-57fe-4b0c-b2eb-0e596c8e27f2-vless", headers: {Host: speech-math-chancellor-sing.trycloudflare.com}, max-early-data: 2560, early-data-header-name: Sec-WebSocket-Protocol }, smux: { enabled: true, protocol: 'h2mux', padding: true, max-connections: '8', min-streams: '16', statistic: true, only-tcp: false }, brutal-opts: { enabled: false, up: '1000 Mbps', down: '1000 Mbps' } }
   - {name: 🇭🇰 VM4369BFAFA1A7355 h2-reality, type: vless, server: 91.213.174.63, port: 8889, uuid: da8429b9-57fe-4b0c-b2eb-0e596c8e27f2, network: http, tls: true, servername: addons.mozilla.org, client-fingerprint: chrome, reality-opts: { public-key: 39f-AtUoNiIZJyittQgP-_ULdDv52GPG_ayUT9LcdD4, short-id: "" }, smux: { enabled: true, protocol: 'h2mux', padding: true, max-connections: '8', min-streams: '16', statistic: true, only-tcp: false }, brutal-opts: { enabled: false, up: '1000 Mbps', down: '1000 Mbps' } }
   - {name: 🇭🇰 VM4369BFAFA1A7355 grpc-reality, type: vless, server: 91.213.174.63, port: 8890, uuid: da8429b9-57fe-4b0c-b2eb-0e596c8e27f2, network: grpc, tls: true, udp: true, flow: , client-fingerprint: chrome, servername: addons.mozilla.org, grpc-opts: {  grpc-service-name: "grpc" }, reality-opts: { public-key: 39f-AtUoNiIZJyittQgP-_ULdDv52GPG_ayUT9LcdD4, short-id: "" }, smux: { enabled: true, protocol: 'h2mux', padding: true, max-connections: '8', min-streams: '16', statistic: true, only-tcp: false }, brutal-opts: { enabled: false, up: '1000 Mbps', down: '1000 Mbps' } }
-  - {name: 🇭🇰 VM4369BFAFA1A7355 anytls, type: anytls, server: 91.213.174.63, port: 8891, password: da8429b9-57fe-4b0c-b2eb-0e596c8e27f2, client-fingerprint: chrome, udp: true, idle-session-check-interval: 30, idle-session-timeout: 30, sni: addons.mozilla.org, skip-cert-verify: false, fingerprint: C9:82:78:72:B6:64:60:34:BA:27:37:FD:EF:24:2A:D4:8B:34:3D:08:0C:88:A4:81:83:AE:09:28:00:97:21:CE }
   - {name: server ShadowTLS, server: 103.204.174.123, port: 8884, cipher: 2022-blake3-aes-128-gcm, password: 30ytxxxtNQO77WO2jpE43g==, type: ss, udp: true}
   - {name: server grpc-reality, server: 103.204.174.123, port: 8890, client-fingerprint: chrome, encryption: none, grpc-opts: {grpc-service-name: grpc}, network: grpc, reality-opts: {public-key: UrJNmeFG_XZthG4U2LBx3nvGStZQlkwNMoXzbngmChE, short-id: ""}, servername: addons.mozilla.org, tls: true, type: vless, udp: true, uuid: 85b3b0bb-6b61-4275-bf6c-f7bec938103e, xudp: true, skip-cert-verify: true}
   - {name: server h2-reality, server: 103.204.174.123, port: 8889, client-fingerprint: chrome, encryption: none, h2-opts: {path: /}, network: h2, reality-opts: {public-key: UrJNmeFG_XZthG4U2LBx3nvGStZQlkwNMoXzbngmChE, short-id: ""}, servername: addons.mozilla.org, tls: true, type: vless, udp: true, uuid: 85b3b0bb-6b61-4275-bf6c-f7bec938103e, xudp: true, skip-cert-verify: true}
@@ -71,7 +70,6 @@ proxy-groups:
       - 🇭🇰 VM4369BFAFA1A7355 vless-ws-tls
       - 🇭🇰 VM4369BFAFA1A7355 h2-reality
       - 🇭🇰 VM4369BFAFA1A7355 grpc-reality
-      - 🇭🇰 VM4369BFAFA1A7355 anytls
       - server ShadowTLS
       - server grpc-reality
       - server h2-reality
@@ -93,7 +91,6 @@ proxy-groups:
       - 🇯🇵 cloud vless-ws-tls
       - 🇯🇵 cloud h2-reality
       - 🇯🇵 cloud grpc-reality
-      - 🇯🇵 cloud anytls
   - name: ♻️ 自动选择
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -131,7 +128,6 @@ proxy-groups:
       - 🇯🇵 cloud vless-ws-tls
       - 🇯🇵 cloud h2-reality
       - 🇯🇵 cloud grpc-reality
-      - 🇯🇵 cloud anytls
   - name: 🚀 高速节点
     type: url-test
     url: https://www.gstatic.com/generate_204
