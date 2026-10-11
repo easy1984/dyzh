@@ -110,7 +110,6 @@ proxy-groups:
       - 🇭🇰 VM4369BFAFA1A7355 vless-ws-tls
       - 🇭🇰 VM4369BFAFA1A7355 h2-reality
       - 🇭🇰 VM4369BFAFA1A7355 grpc-reality
-      - 🇭🇰 VM4369BFAFA1A7355 anytls
       - server ShadowTLS
       - server grpc-reality
       - server h2-reality
