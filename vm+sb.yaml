@@ -4,6 +4,19 @@ allow-lan: true
 mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
+ipv6: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  prefer-h3: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
 proxies:
   - {name: server ShadowTLS, server: 103.204.174.123, port: 8884, cipher: 2022-blake3-aes-128-gcm, password: 30ytxxxtNQO77WO2jpE43g==, type: ss, udp: true}
   - {name: server grpc-reality, server: 103.204.174.123, port: 8890, client-fingerprint: chrome, encryption: none, grpc-opts: {grpc-service-name: grpc}, network: grpc, reality-opts: {public-key: UrJNmeFG_XZthG4U2LBx3nvGStZQlkwNMoXzbngmChE, short-id: ""}, servername: addons.mozilla.org, tls: true, type: vless, udp: true, uuid: 85b3b0bb-6b61-4275-bf6c-f7bec938103e, xudp: true, skip-cert-verify: true}
@@ -190,7 +203,7 @@ rule-providers:
   Telegram (IP-CIDR):
     type: http
     behavior: ipcidr
-    url: "https://api.asailor.org/getruleset?type=4&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vQUNMNFNTUi9BQ0w0U1NSL21hc3Rlci9DbGFzaC9UZWxlZ3JhbS5saXN0"
+    url: "https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vQUNMNFNTUi9BQ0w0U1NSL21hc3Rlci9DbGFzaC9UZWxlZ3JhbS5saXN0"
     path: ./providers/Telegram-ipcidr-03cf5a4ad0298d51.yaml
     format: yaml
     interval: 86400
