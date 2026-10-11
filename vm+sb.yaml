@@ -140,13 +140,11 @@ proxy-groups:
     interval: 60
     tolerance: 100
     proxies:
-      - 🇭🇰 VM4369BFAFA1A7355 hysteria2
-      - 🇭🇰 VM4369BFAFA1A7355 tuic
-      - 高速Hysteria2-misaka
-      - 高速server hysteria2
-      - 高速server xtls-reality
       - 高速🇯🇵 cloud xtls-reality
       - 高速🇯🇵 cloud hysteria2
+      - 高速server hysteria2
+      - 高速server xtls-reality
+      - 高速Hysteria2-misaka
   - name: 📹 油管视频
     type: select
     proxies:
