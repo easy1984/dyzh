@@ -725,7 +725,7 @@ proxy-groups:
   - 🚀 高速节点
   - 🚀 节点选择
   - ♻️ 自动选择
-  - 🚀 手nd切换
+  - 🚀 手动切换
 - name: 💬 电报消息
   type: select
   proxies:
@@ -770,17 +770,24 @@ rules:
 - GEOIP,CN,🎯 全球直连
 - MATCH,🐟 漏网之鱼
 rule-providers:
+  guowai (Domain):
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/easy1984/dyzh/refs/heads/main/guowai.list
+    path: ./providers/guowai-domain.yaml
+    format: yaml
+    interval: 86400
   LocalAreaNetwork (Domain):
     type: http
     behavior: domain
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/LocalAreaNetwork.list
+    url: https://raw.githubusercontent.com/easy1984/dyzh/refs/heads/main/LocalAreaNetwork.list
     path: ./providers/LocalAreaNetwork-domain.yaml
     format: yaml
     interval: 86400
   LocalAreaNetwork (IP-CIDR):
     type: http
     behavior: ipcidr
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/LocalAreaNetwork.list
+    url: https://raw.githubusercontent.com/easy1984/dyzh/refs/heads/main/LocalAreaNetwork.list
     path: ./providers/LocalAreaNetwork-ipcidr.yaml
     format: yaml
     interval: 86400
