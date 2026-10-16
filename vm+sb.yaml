@@ -763,7 +763,7 @@ rules:
 - DOMAIN-KEYWORD,youtube,📹 油管视频
 - GEOSITE,youtube,📹 油管视频
 - GEOSITE,telegram,💬 电报消息
-- GEOSITE,private,🎯 全球直连
 - GEOIP,telegram,💬 电报消息,no-resolve
+- GEOSITE,private,🎯 全球直连
 - GEOIP,CN,🎯 全球直连
 - MATCH,🐟 漏网之鱼
