@@ -725,7 +725,7 @@ proxy-groups:
   - 🚀 高速节点
   - 🚀 节点选择
   - ♻️ 自动选择
-  - 🚀 手动切换
+  - 🚀 手nd切换
 - name: 💬 电报消息
   type: select
   proxies:
@@ -770,73 +770,66 @@ rules:
 - GEOIP,CN,🎯 全球直连
 - MATCH,🐟 漏网之鱼
 rule-providers:
-  guowai (Domain):
-    type: http
-    behavior: domain
-    url: https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vZWFzeTE5ODQvZHl6aC9yZWZzL2hlYzdDcy9tYWluL2d1b3dhaS5saXN0
-    path: ./providers/guowai-domain-47440131eea8ed7b.yaml
-    format: yaml
-    interval: 86400
   LocalAreaNetwork (Domain):
     type: http
     behavior: domain
-    url: https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vZWFzeTE5ODQvZHl6aC9yZWZzL2hlYWRzL21haW4vTG9jYWxBcmVhTmV0d29yay5saXN0
-    path: ./providers/LocalAreaNetwork-domain-082ed9f25b583947.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/LocalAreaNetwork.list
+    path: ./providers/LocalAreaNetwork-domain.yaml
     format: yaml
     interval: 86400
   LocalAreaNetwork (IP-CIDR):
     type: http
     behavior: ipcidr
-    url: https://api.asailor.org/getruleset?type=4&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vZWFzeTE5ODQvZHl6aC9yZWZzL2hlYWRzL21haW4vTG9jYWxBcmVhTmV0d29yay5saXN0
-    path: ./providers/LocalAreaNetwork-ipcidr-082ed9f25b583947.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/LocalAreaNetwork.list
+    path: ./providers/LocalAreaNetwork-ipcidr.yaml
     format: yaml
     interval: 86400
   YouTube (Domain):
     type: http
     behavior: domain
-    url: https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vQUNMNFNTUi9BQ0w0U1NSL21hc3Rlci9DbGFzaC9SdWxlc2V0L1lvdVR1YmUubGlzdA
-    path: ./providers/YouTube-domain-c6e690ca7d43e310.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+    path: ./providers/YouTube-domain.yaml
     format: yaml
     interval: 86400
   Telegram (Domain):
     type: http
     behavior: domain
-    url: https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vQUNMNFNTUi9BQ0w0U1NSL21hc3Rlci9DbGFzaC9UZWxlZ3JhbS5saXN0
-    path: ./providers/Telegram-domain-03cf5a4ad0298d51.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Telegram.list
+    path: ./providers/Telegram-domain.yaml
     format: yaml
     interval: 86400
   Telegram (IP-CIDR):
     type: http
     behavior: ipcidr
-    url: https://api.asailor.org/getruleset?type=4&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vQUNMNFNTUi9BQ0w0U1NSL21hc3Rlci9DbGFzaC9UZWxlZ3JhbS5saXN0
-    path: ./providers/Telegram-ipcidr-03cf5a4ad0298d51.yaml
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Telegram.list
+    path: ./providers/Telegram-ipcidr.yaml
     format: yaml
     interval: 86400
   Google (Domain):
     type: http
     behavior: domain
-    url: https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Hb29nbGUubGlzdA
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list
     path: ./providers/Google-domain.yaml
     format: yaml
     interval: 86400
   GitHub (Domain):
     type: http
     behavior: domain
-    url: https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9HaXRIdWIubGlzdA
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GitHub.list
     path: ./providers/GitHub-domain.yaml
     format: yaml
     interval: 86400
   OpenAI (Domain):
     type: http
     behavior: domain
-    url: https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9PcGVuQUkubGlzdA
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAI.list
     path: ./providers/OpenAI-domain.yaml
     format: yaml
     interval: 86400
   OpenAI (IP-CIDR):
     type: http
     behavior: ipcidr
-    url: https://api.asailor.org/getruleset?type=4&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9PcGVuQUkuaXBjaWRy
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAI.list
     path: ./providers/OpenAI-ipcidr.yaml
     format: yaml
     interval: 86400
