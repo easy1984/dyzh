@@ -697,7 +697,7 @@ proxy-groups:
   - 高速🇯🇵 cloud hysteria2
   - 高速server hysteria2
   - 高速server xtls-reality
-  - 高速Hysteria2-misaka
+  - HighSpeedHysteria2-misaka -> 高速Hysteria2-misaka
 - name: 🔍 谷歌服务
   type: select
   proxies:
