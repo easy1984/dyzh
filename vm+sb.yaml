@@ -736,28 +736,21 @@ proxy-groups:
   - 🚀 手动切换
   - DIRECT
 rules:
-- DOMAIN-SUFFIX,good.852851.xyz,🌍 国外媒体
-- DOMAIN-SUFFIX,github.com,🌍 国外媒体
-- DOMAIN-SUFFIX,google.com,🌍 国外媒体
-- DOMAIN-SUFFIX,chatgpt.com,🌍 国外媒体
-- DOMAIN-KEYWORD,ymawv,🌍 国外媒体
-- DOMAIN-KEYWORD,openai,🌍 国外媒体
-- DOMAIN-KEYWORD,anthropic,🌍 国外媒体
-- DOMAIN-KEYWORD,claude,🌍 国外媒体
-- RULE-SET,guowai (Domain),🌍 国外媒体
-- RULE-SET,LocalAreaNetwork (Domain),🎯 全球直连
-- RULE-SET,LocalAreaNetwork (IP-CIDR),🎯 全球直连,no-resolve
+- RULE-SET,Google (Domain),🌍 国外媒体
+- RULE-SET,OpenAI (Domain),🌍 国外媒体
 - DOMAIN-KEYWORD,youtube,📹 油管视频
 - RULE-SET,YouTube (Domain),📹 油管视频
 - RULE-SET,Telegram (Domain),💬 电报消息
 - RULE-SET,Telegram (IP-CIDR),💬 电报消息,no-resolve
+- RULE-SET,LocalAreaNetwork (Domain),🎯 全球直连
+- RULE-SET,LocalAreaNetwork (IP-CIDR),🎯 全球直连,no-resolve
 - GEOIP,CN,🎯 全球直连
 - MATCH,🐟 漏网之鱼
 rule-providers:
   guowai (Domain):
     type: http
     behavior: domain
-    url: https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vZWFzeTE5ODQvZHl6aC9yZWZzL2hlYWRzL21haW4vZ3Vvd2FpLmxpc3Q
+    url: https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vZWFzeTE5ODQvZHl6aC9yZWZzL2hlYzdDcy9tYWluL2d1b3dhaS5saXN0
     path: ./providers/guowai-domain-47440131eea8ed7b.yaml
     format: yaml
     interval: 86400
@@ -794,5 +787,20 @@ rule-providers:
     behavior: ipcidr
     url: https://api.asailor.org/getruleset?type=4&url=aHR0cHM6Ly9qeHouODQwMTIwLnh5ei9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vQUNMNFNTUi9BQ0w0U1NSL21hc3Rlci9DbGFzaC9UZWxlZ3JhbS5saXN0
     path: ./providers/Telegram-ipcidr-03cf5a4ad0298d51.yaml
+    format: yaml
+    interval: 86400
+  # --- 新增的 Google 和 OpenAI 远程规则集 ---
+  Google (Domain):
+    type: http
+    behavior: domain
+    url: https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9Hb29nbGUubGlzdA
+    path: ./providers/Google-domain.yaml
+    format: yaml
+    interval: 86400
+  OpenAI (Domain):
+    type: http
+    behavior: domain
+    url: https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9PcGVuQUkubGlzdA
+    path: ./providers/OpenAI-domain.yaml
     format: yaml
     interval: 86400
