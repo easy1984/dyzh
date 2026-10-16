@@ -739,6 +739,7 @@ rules:
 - DOMAIN-SUFFIX,good.852851.xyz,🌍 国外媒体
 - DOMAIN-SUFFIX,github.com,🌍 国外媒体
 - DOMAIN-SUFFIX,google.com,🌍 国外媒体
+- DOMAIN-SUFFIX,chatgpt.com,🌍 国外媒体
 - DOMAIN-KEYWORD,ymawv,🌍 国外媒体
 - DOMAIN-KEYWORD,openai,🌍 国外媒体
 - DOMAIN-KEYWORD,anthropic,🌍 国外媒体
