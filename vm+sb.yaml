@@ -698,6 +698,27 @@ proxy-groups:
   - 高速server hysteria2
   - 高速server xtls-reality
   - 高速Hysteria2-misaka
+- name: 🔍 谷歌服务
+  type: select
+  proxies:
+  - 🚀 高速节点
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换
+- name: 🐙 GitHub
+  type: select
+  proxies:
+  - 🚀 高速节点
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换
+- name: 🤖 人工智能
+  type: select
+  proxies:
+  - 🚀 高速节点
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - 🚀 手动切换
 - name: 📹 油管视频
   type: select
   proxies:
@@ -736,8 +757,10 @@ proxy-groups:
   - 🚀 手动切换
   - DIRECT
 rules:
-- RULE-SET,Google (Domain),🌍 国外媒体
-- RULE-SET,OpenAI (Domain),🌍 国外媒体
+- RULE-SET,Google (Domain),🔍 谷歌服务
+- RULE-SET,GitHub (Domain),🐙 GitHub
+- RULE-SET,OpenAI (Domain),🤖 人工智能
+- RULE-SET,OpenAI (IP-CIDR),🤖 人工智能,no-resolve
 - DOMAIN-KEYWORD,youtube,📹 油管视频
 - RULE-SET,YouTube (Domain),📹 油管视频
 - RULE-SET,Telegram (Domain),💬 电报消息
@@ -789,7 +812,6 @@ rule-providers:
     path: ./providers/Telegram-ipcidr-03cf5a4ad0298d51.yaml
     format: yaml
     interval: 86400
-  # --- 新增的 Google 和 OpenAI 远程规则集 ---
   Google (Domain):
     type: http
     behavior: domain
@@ -797,10 +819,24 @@ rule-providers:
     path: ./providers/Google-domain.yaml
     format: yaml
     interval: 86400
+  GitHub (Domain):
+    type: http
+    behavior: domain
+    url: https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9HaXRIdWIubGlzdA
+    path: ./providers/GitHub-domain.yaml
+    format: yaml
+    interval: 86400
   OpenAI (Domain):
     type: http
     behavior: domain
     url: https://api.asailor.org/getruleset?type=3&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9PcGVuQUkubGlzdA
     path: ./providers/OpenAI-domain.yaml
+    format: yaml
+    interval: 86400
+  OpenAI (IP-CIDR):
+    type: http
+    behavior: ipcidr
+    url: https://api.asailor.org/getruleset?type=4&url=aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FDTDRTU1IvQUNMNFNTUi9tYXN0ZXIvQ2xhc2gvUnVsZXNldC9PcGVuQUkuaXBjaWRy
+    path: ./providers/OpenAI-ipcidr.yaml
     format: yaml
     interval: 86400
