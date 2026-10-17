@@ -478,7 +478,7 @@ proxy-groups:
   - 🚀 高速节点
   - 🚀 节点选择
   - ♻️ 自动选择
-  - 🚀 手동切换
+  - 🚀 手动切换
 - name: 📹 油管视频
   type: select
   proxies:
