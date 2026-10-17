@@ -757,13 +757,14 @@ proxy-groups:
   - 🚀 手动切换
   - DIRECT
 rules:
-- GEOSITE,google,🔍 谷歌服务
-- GEOSITE,github,🐙 GitHub
-- GEOSITE,openai,🤖 人工智能
-- DOMAIN-KEYWORD,youtube,📹 油管视频
-- GEOSITE,youtube,📹 油管视频
-- GEOSITE,telegram,💬 电报消息
-- GEOIP,telegram,💬 电报消息,no-resolve
-- GEOSITE,private,🎯 全球直连
-- GEOIP,CN,🎯 全球直连
-- MATCH,🐟 漏网之鱼
+  - DOMAIN-SUFFIX,ipify.org,🚀 高速节点
+  - DOMAIN-SUFFIX,ip.sb,🚀 高速节点
+  - GEOSITE,google,🔍 谷歌服务
+  - GEOSITE,github,🐙 GitHub
+  - GEOSITE,openai,🤖 人工智能
+  - GEOSITE,youtube,📹 油管视频
+  - GEOSITE,telegram,💬 电报消息
+  - GEOIP,telegram,💬 电报消息,no-resolve
+  - GEOSITE,private,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
