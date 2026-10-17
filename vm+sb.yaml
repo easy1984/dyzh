@@ -8,6 +8,7 @@ ipv6: true
 profile:
   store-selected: true
   store-fake-ip: true
+
 dns:
   enable: true
   ipv6: true
@@ -16,7 +17,47 @@ dns:
   enhanced-mode: fake-ip
   nameserver:
   - 223.5.5.5
-  - 119.29.29.29
+
+# --- 规则集锚点定义 ---
+rule-providers:
+  domain: &domain
+    type: http
+    behavior: domain
+    interval: 86400
+  ip: &ip
+    type: http
+    behavior: ipcidr
+    interval: 86400
+  class: &class
+    type: http
+    behavior: classical
+    interval: 86400
+
+  ChatGPT:
+    <<: *domain
+    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"
+  Gemini:
+    <<: *class
+    url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Gemini.list"
+  GitHub:
+    <<: *domain
+    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/github.mrs"
+  Telegram_Domain:
+    <<: *domain
+    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/telegram.mrs"
+  Telegram_IP:
+    <<: *ip
+    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/telegram.mrs"
+  Youtube:
+    <<: *domain
+    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs"
+  Google_Domain:
+    <<: *domain
+    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"
+  Google_IP:
+    <<: *ip
+    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"
+
 proxies:
 - name: server ShadowTLS
   server: 103.204.174.123
@@ -388,6 +429,7 @@ proxies:
     enabled: false
     up: 1000 Mbps
     down: 1000 Mbps
+
 proxy-groups:
 - name: 🚀 节点选择
   type: select
@@ -464,7 +506,7 @@ proxy-groups:
   - 🚀 高速节点
   - 🚀 节点选择
   - ♻️ 自动选择
-  - 🚀 手动切换
+  - 🚀 手동切换
 - name: 🐙 GitHub
   type: select
   proxies:
@@ -516,40 +558,30 @@ proxy-groups:
   - ♻️ 自动选择
   - 🚀 手动切换
   - DIRECT
+
 rules:
   - DOMAIN-SUFFIX,ipify.org,🚀 高速节点
   - DOMAIN-SUFFIX,ip.sb,🚀 高速节点
 
   # --- 人工智能 (OpenAI / ChatGPT) ---
-  - DOMAIN-SUFFIX,openai.com,🤖 人工智能
-  - DOMAIN-SUFFIX,chatgpt.com,🤖 人工智能
-  - DOMAIN-SUFFIX,oaistatic.com,🤖 人工智能
-  - DOMAIN-SUFFIX,oaiusercontent.com,🤖 人工智能
+  - RULE-SET,ChatGPT,🤖 人工智能
 
   # --- 人工智能 (Gemini / Google AI) ---
-  - DOMAIN-SUFFIX,gemini.google.com,🤖 人工智能
-  - DOMAIN-SUFFIX,generativeai.google,🤖 人工智能
-  - DOMAIN-SUFFIX,bard.google.com,🤖 人工智能
-  - DOMAIN-SUFFIX,deepmind.com,🤖 人工智能
-  - DOMAIN-SUFFIX,deepmind.google,🤖 人工智能
-  - DOMAIN-KEYWORD,colab,🤖 人工智能
+  - RULE-SET,Gemini,🤖 人工智能
 
   # --- 油管视频 (YouTube) ---
-  - DOMAIN-SUFFIX,youtube.com,📹 油管视频
-  - DOMAIN-SUFFIX,googlevideo.com,📹 油管视频
-  - DOMAIN-SUFFIX,youtu.be,📹 油管视频
-  - DOMAIN-KEYWORD,youtube,📹 油管视频
+  - RULE-SET,Youtube,📹 油管视频
 
   # --- 电报消息 (Telegram) ---
-  - DOMAIN-SUFFIX,t.me,💬 电报消息
-  - DOMAIN-SUFFIX,telegram.org,💬 电报消息
-  - DOMAIN-SUFFIX,telegram.me,💬 电报消息
-  - IP-CIDR,91.108.4.0/22,💬 电报消息,no-resolve
-  - IP-CIDR,149.154.160.0/20,💬 电报消息,no-resolve
+  - RULE-SET,Telegram_Domain,💬 电报消息
+  - RULE-SET,Telegram_IP,💬 电报消息
 
-  # --- 其他规则 ---
-  - GEOSITE,github,🐙 GitHub
-  - GEOSITE,google,🔍 谷歌服务
+  # --- 其他规则集 ---
+  - RULE-SET,GitHub,🐙 GitHub
+  - RULE-SET,Google_Domain,🔍 谷歌服务
+  - RULE-SET,Google_IP,🔍 谷歌服务
+
+  # --- 本地及直连规则 ---
   - GEOSITE,private,🎯 全球直连
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼
