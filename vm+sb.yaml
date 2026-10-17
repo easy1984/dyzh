@@ -348,4 +348,299 @@ proxies:
       only-tcp: false
     brutal-opts:
       enabled: false
-      up
+      up: 1000 Mbps
+      down: 1000 Mbps
+  - name: 🇯🇵 cloud shadowsocks
+    type: ss
+    server: 103.27.187.188
+    port: 8885
+    cipher: 2022-blake3-aes-128-gcm
+    password: CQbHR0v2wSaC4+Zu8KNpNA==
+    smux:
+      enabled: true
+      protocol: h2mux
+      padding: true
+      max-connections: '8'
+      min-streams: '16'
+      statistic: true
+      only-tcp: false
+    brutal-opts:
+      enabled: false
+      up: 1000 Mbps
+      down: 1000 Mbps
+  - name: 🇯🇵 cloud trojan
+    type: trojan
+    server: 103.27.187.188
+    port: 8886
+    password: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    client-fingerprint: chrome
+    sni: addons.mozilla.org
+    skip-cert-verify: false
+    fingerprint: 1C:57:5B:C9:0D:A6:A8:37:DA:D1:11:FF:49:06:96:F4:9E:57:67:6F:31:91:B3:35:8F:5D:81:98:5C:EF:A9:89
+    smux:
+      enabled: true
+      protocol: h2mux
+      padding: true
+      max-connections: '8'
+      min-streams: '16'
+      statistic: true
+      only-tcp: false
+    brutal-opts:
+      enabled: false
+      up: 1000 Mbps
+      down: 1000 Mbps
+  - name: 🇯🇵 cloud vmess-ws
+    type: vmess
+    server: skk.moe
+    port: 80
+    uuid: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    udp: true
+    tls: false
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /9c987a30-e7f7-4b87-92de-57057bfa866c-vmess
+      headers:
+        Host: besides-linear-recognized-hamburg.trycloudflare.com
+    smux:
+      enabled: true
+      protocol: h2mux
+      padding: true
+      max-connections: '8'
+      min-streams: '16'
+      statistic: true
+      only-tcp: false
+    brutal-opts:
+      enabled: false
+      up: 1000 Mbps
+      down: 1000 Mbps
+  - name: 🇯🇵 cloud vless-ws-tls
+    type: vless
+    server: skk.moe
+    port: 443
+    uuid: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    udp: true
+    tls: true
+    servername: besides-linear-recognized-hamburg.trycloudflare.com
+    network: ws
+    skip-cert-verify: false
+    ws-opts:
+      path: /9c987a30-e7f7-4b87-92de-57057bfa866c-vless
+      headers:
+        Host: besides-linear-recognized-hamburg.trycloudflare.com
+      max-early-data: 2560
+      early-data-header-name: Sec-WebSocket-Protocol
+    smux:
+      enabled: true
+      protocol: h2mux
+      padding: true
+      max-connections: '8'
+      min-streams: '16'
+      statistic: true
+      only-tcp: false
+    brutal-opts:
+      enabled: false
+      up: 1000 Mbps
+      down: 1000 Mbps
+  - name: 🇯🇵 cloud h2-reality
+    type: vless
+    server: 103.27.187.188
+    port: 8889
+    uuid: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    network: http
+    tls: true
+    servername: addons.mozilla.org
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Ne43_vysuR0Q7yVUyiTt1DF4uPY-wiPv2qf6PYE62Xw
+      short-id: ''
+    smux:
+      enabled: true
+      protocol: h2mux
+      padding: true
+      max-connections: '8'
+      min-streams: '16'
+      statistic: true
+      only-tcp: false
+    brutal-opts:
+      enabled: false
+      up: 1000 Mbps
+      down: 1000 Mbps
+  - name: 🇯🇵 cloud grpc-reality
+    type: vless
+    server: 103.27.187.188
+    port: 8890
+    uuid: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    network: grpc
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+    servername: addons.mozilla.org
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: Ne43_vysuR0Q7yVUyiTt1DF4uPY-wiPv2qf6PYE62Xw
+      short-id: ''
+    smux:
+      enabled: true
+      protocol: h2mux
+      padding: true
+      max-connections: '8'
+      min-streams: '16'
+      statistic: true
+      only-tcp: false
+    brutal-opts:
+      enabled: false
+      up: 1000 Mbps
+      down: 1000 Mbps
+
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - ♻️ 自动选择
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🚀 手动切换
+    type: select
+    proxies:
+      - server ShadowTLS
+      - server grpc-reality
+      - server h2-reality
+      - server shadowsocks
+      - server trojan
+      - server tuic
+      - server vless-ws-tls
+      - server vmess-ws
+      - 高速Hysteria2-misaka
+      - 高速server hysteria2
+      - 高速server xtls-reality
+      - 高速🇯🇵 cloud xtls-reality
+      - 高速🇯🇵 cloud hysteria2
+      - 🇯🇵 cloud tuic
+      - 🇯🇵 cloud ShadowTLS
+      - 🇯🇵 cloud shadowsocks
+      - 🇯🇵 cloud trojan
+      - 🇯🇵 cloud vmess-ws
+      - 🇯🇵 cloud vless-ws-tls
+      - 🇯🇵 cloud h2-reality
+      - 🇯🇵 cloud grpc-reality
+  - name: ♻️ 自动选择
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 100
+    proxies:
+      - server ShadowTLS
+      - server grpc-reality
+      - server h2-reality
+      - server shadowsocks
+      - server trojan
+      - server tuic
+      - server vless-ws-tls
+      - server vmess-ws
+      - 高速Hysteria2-misaka
+      - 高速server hysteria2
+      - 高速server xtls-reality
+      - 高速🇯🇵 cloud xtls-reality
+      - 高速🇯🇵 cloud hysteria2
+      - 🇯🇵 cloud tuic
+      - 🇯🇵 cloud ShadowTLS
+      - 🇯🇵 cloud shadowsocks
+      - 🇯🇵 cloud trojan
+      - 🇯🇵 cloud vmess-ws
+      - 🇯🇵 cloud vless-ws-tls
+      - 🇯🇵 cloud h2-reality
+      - 🇯🇵 cloud grpc-reality
+  - name: 🚀 高速节点
+    type: url-test
+    url: https://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 150
+    proxies:
+      - 高速🇯🇵 cloud xtls-reality
+      - 高速🇯🇵 cloud hysteria2
+      - 高速server hysteria2
+      - 高速server xtls-reality
+      - 高速Hysteria2-misaka
+  - name: 🔍 谷歌服务
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🚀 手动切换
+  - name: 🐙 GitHub
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🚀 手动切换
+  - name: 🤖 人工智能
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🚀 手动切换
+  - name: 📹 油管视频
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🚀 手动切换
+  - name: 💬 电报消息
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🚀 手动切换
+  - name: 🌍 国外媒体
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 高速节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - 🚀 节点选择
+      - ♻️ 自动选择
+      - 🚀 手动切换
+      - DIRECT
+  - name: 📲 电报消息
+    type: select
+    proxies:
+      - 💬 电报消息
+      - 🚀 高速节点
+      - 🚀 节点选择
+  - name: 💬 Ai平台
+    type: select
+    proxies:
+      - 🤖 人工智能
+      - 🚀 高速节点
+      - 🚀 节点选择
+
+# --- 规则部分 ---
+rules:
+  - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,ACL_Telegram,📲 电报消息
+  - RULE-SET,AI,💬 Ai平台
+  - RULE-SET,ACL_YouTube,📹 油管视频
+  - GEOIP,CN,🎯 全球直连
+  - MATCH,🐟 漏网之鱼
