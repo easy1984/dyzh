@@ -20,43 +20,61 @@ dns:
 
 # --- 规则集锚点定义 ---
 rule-providers:
-  domain: &domain
+  ChatGPT:
     type: http
     behavior: domain
-    interval: 86400
-  ip: &ip
-    type: http
-    behavior: ipcidr
-    interval: 86400
-  class: &class
-    type: http
-    behavior: classical
+    url: "https://fastly.jsdelivr.net/gh/metacubex/meta-rules-dat@meta/geo/geosite/openai.mrs"
+    path: ./ruleset/chatgpt.mrs
     interval: 86400
 
-  ChatGPT:
-    <<: *domain
-    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"
   Gemini:
-    <<: *class
-    url: "https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Gemini.list"
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/Gemini.list"
+    path: ./ruleset/gemini.list
+    interval: 86400
+
   GitHub:
-    <<: *domain
-    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/github.mrs"
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/metacubex/meta-rules-dat@meta/geo/geosite/github.mrs"
+    path: ./ruleset/github.mrs
+    interval: 86400
+
   Telegram_Domain:
-    <<: *domain
-    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/telegram.mrs"
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/metacubex/meta-rules-dat@meta/geo/geosite/telegram.mrs"
+    path: ./ruleset/telegram_domain.mrs
+    interval: 86400
+
   Telegram_IP:
-    <<: *ip
-    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/telegram.mrs"
+    type: http
+    behavior: ipcidr
+    url: "https://fastly.jsdelivr.net/gh/metacubex/meta-rules-dat@meta/geo/geoip/telegram.mrs"
+    path: ./ruleset/telegram_ip.mrs
+    interval: 86400
+
   Youtube:
-    <<: *domain
-    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/youtube.mrs"
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/metacubex/meta-rules-dat@meta/geo/geosite/youtube.mrs"
+    path: ./ruleset/youtube.mrs
+    interval: 86400
+
   Google_Domain:
-    <<: *domain
-    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geosite/google.mrs"
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/metacubex/meta-rules-dat@meta/geo/geosite/google.mrs"
+    path: ./ruleset/google_domain.mrs
+    interval: 86400
+
   Google_IP:
-    <<: *ip
-    url: "https://gh-proxy.com/github.com/metacubex/meta-rules-dat/raw/refs/heads/meta/geo/geoip/google.mrs"
+    type: http
+    behavior: ipcidr
+    url: "https://fastly.jsdelivr.net/gh/metacubex/meta-rules-dat@meta/geo/geoip/google.mrs"
+    path: ./ruleset/google_ip.mrs
+    interval: 86400
 
 proxies:
 - name: server ShadowTLS
