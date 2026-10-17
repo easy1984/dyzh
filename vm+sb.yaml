@@ -30,6 +30,18 @@ rule-providers:
       - IP-CIDR,172.16.0.0/12,no-resolve
       - IP-CIDR,192.168.0.0/16,no-resolve
 
+  GitHub:
+    type: inline
+    behavior: classical
+    payload:
+      - DOMAIN-KEYWORD,github
+      - DOMAIN-SUFFIX,github.com
+      - DOMAIN-SUFFIX,github.io
+      - DOMAIN-SUFFIX,githubapp.com
+      - DOMAIN-SUFFIX,githubassets.com
+      - DOMAIN-SUFFIX,githubusercontent.com
+      - DOMAIN-SUFFIX,git.io
+
   AI:
     type: inline
     behavior: classical
@@ -639,6 +651,7 @@ proxy-groups:
 # --- 规则部分 ---
 rules:
   - RULE-SET,LocalAreaNetwork,🎯 全球直连
+  - RULE-SET,GitHub,🐙 GitHub
   - RULE-SET,ACL_Telegram,📲 电报消息
   - RULE-SET,AI,💬 Ai平台
   - RULE-SET,ACL_YouTube,📹 油管视频
