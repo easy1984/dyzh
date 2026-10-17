@@ -137,6 +137,20 @@ rule-providers:
       - DOMAIN-SUFFIX,yt.be
       - DOMAIN-SUFFIX,ytimg.com
 
+  # --- 新增的谷歌服务内联规则 ---
+  Google:
+    type: inline
+    behavior: classical
+    payload:
+      - DOMAIN-KEYWORD,google
+      - DOMAIN-SUFFIX,googleapis.com
+      - DOMAIN-SUFFIX,gstatic.com
+      - DOMAIN-SUFFIX,googleusercontent.com
+      - DOMAIN-SUFFIX,gvt1.com
+      - DOMAIN-SUFFIX,gvt2.com
+      - DOMAIN-SUFFIX,googlevideo.com
+      - DOMAIN-SUFFIX,1e100.net
+
 proxies:
   - name: server ShadowTLS
     server: 103.204.174.123
@@ -657,5 +671,6 @@ rules:
   - RULE-SET,ACL_Telegram,📲 电报消息
   - RULE-SET,AI,💬 Ai平台
   - RULE-SET,ACL_YouTube,📹 油管视频
+  - RULE-SET,Google,🔍 谷歌服务       # <--- 已成功补充的 Google 内联规则
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼
