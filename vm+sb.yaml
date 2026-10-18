@@ -667,10 +667,10 @@ proxy-groups:
 # --- 规则部分 ---
 rules:
   - RULE-SET,LocalAreaNetwork,🎯 全球直连
-  - RULE-SET,GitHub,🐙 GitHub
-  - RULE-SET,ACL_Telegram,📲 电报消息
-  - RULE-SET,AI,💬 Ai平台
   - RULE-SET,ACL_YouTube,📹 油管视频
-  - RULE-SET,Google,🔍 谷歌服务       # <--- 已成功补充的 Google 内联规则
+  - RULE-SET,AI,💬 Ai平台
+  - RULE-SET,GitHub,🐙 GitHub
+  - RULE-SET,Google,🔍 谷歌服务
+  - RULE-SET,ACL_Telegram,📲 电报消息
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼
