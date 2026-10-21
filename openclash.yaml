@@ -18,72 +18,6 @@ dns:
   nameserver:
     - 223.5.5.5
 
-# --- 在线规则集（MetaCubeX/meta-rules-dat，mrs 格式）---
-rule-providers:
-  LocalAreaNetwork:
-    type: http
-    behavior: ipcidr
-    format: mrs
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/private.mrs
-    path: ./ruleset/geoip/private.mrs
-    interval: 86400
-
-  CN:
-    type: http
-    behavior: ipcidr
-    format: mrs
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.mrs
-    path: ./ruleset/geoip/cn.mrs
-    interval: 86400
-
-  GitHub:
-    type: http
-    behavior: domain
-    format: mrs
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs
-    path: ./ruleset/geosite/github.mrs
-    interval: 86400
-
-  AI:
-    type: http
-    behavior: domain
-    format: mrs
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-!cn.mrs
-    path: ./ruleset/geosite/category-ai-!cn.mrs
-    interval: 86400
-
-  Telegram:
-    type: http
-    behavior: domain
-    format: mrs
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.mrs
-    path: ./ruleset/geosite/telegram.mrs
-    interval: 86400
-
-  Telegram-IP:
-    type: http
-    behavior: ipcidr
-    format: mrs
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs
-    path: ./ruleset/geoip/telegram.mrs
-    interval: 86400
-
-  YouTube:
-    type: http
-    behavior: domain
-    format: mrs
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.mrs
-    path: ./ruleset/geosite/youtube.mrs
-    interval: 86400
-
-  Google:
-    type: http
-    behavior: domain
-    format: mrs
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs
-    path: ./ruleset/geosite/google.mrs
-    interval: 86400
-
 proxies:
   - name: server ShadowTLS
     server: 103.204.174.123
@@ -439,14 +373,15 @@ proxy-groups:
       - 🚀 手动切换
       - DIRECT
 
-# --- 规则部分 ---
+# --- 规则部分（全部采用内核原生 GEOSITE / GEOIP，零远程下载依赖）---
 rules:
-  - RULE-SET,LocalAreaNetwork,DIRECT
-  - RULE-SET,YouTube,🚀 高速节点
-  - RULE-SET,AI,🚀 高速节点
-  - RULE-SET,GitHub,🚀 高速节点
-  - RULE-SET,Google,🚀 高速节点
-  - RULE-SET,Telegram,🚀 高速节点
-  - RULE-SET,Telegram-IP,🚀 高速节点
-  - RULE-SET,CN,DIRECT
+  - GEOIP,private,DIRECT,no-resolve
+  - GEOSITE,private,DIRECT
+  - GEOSITE,youtube,🚀 高速节点
+  - GEOSITE,google,🚀 高速节点
+  - GEOSITE,github,🚀 高速节点
+  - GEOSITE,telegram,🚀 高速节点
+  - GEOIP,telegram,🚀 高速节点,no-resolve
+  - GEOSITE,category-ai-!cn,🚀 高速节点
+  - GEOIP,cn,DIRECT,no-resolve
   - MATCH,🐟 漏网之鱼
