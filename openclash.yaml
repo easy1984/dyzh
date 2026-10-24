@@ -4,14 +4,14 @@ allow-lan: true
 mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
-ipv6: true
+ipv6: false
 profile:
   store-selected: true
   store-fake-ip: true
 
 dns:
   enable: true
-  ipv6: true
+  ipv6: false
   prefer-h3: true
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
@@ -24,8 +24,6 @@ dns:
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
-    - 2400:3200::1
-    - 2400:3200:baba::1
 
 proxies:
   - name: server ShadowTLS
@@ -383,9 +381,10 @@ proxy-groups:
       - DIRECT
 
 rules:
-  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - GEOIP,private,DIRECT,no-resolve
   - GEOSITE,private,DIRECT
   - DOMAIN-SUFFIX,xunlei.com,DIRECT
