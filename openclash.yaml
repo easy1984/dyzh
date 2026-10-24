@@ -377,6 +377,26 @@ proxy-groups:
 rules:
   - GEOIP,private,DIRECT,no-resolve
   - GEOSITE,private,DIRECT
+  # 迅雷云盘走直连
+  - DOMAIN-SUFFIX,xunlei.com,DIRECT
+  - DOMAIN-SUFFIX,xlmc.sandai.net,DIRECT
+  - DOMAIN-KEYWORD,xunlei,DIRECT
+  # 常用 IP 查询网站走直连
+  - DOMAIN-SUFFIX,ip.sb,DIRECT
+  - DOMAIN-SUFFIX,ipinfo.io,DIRECT
+  - DOMAIN-SUFFIX,ip-api.com,DIRECT
+  - DOMAIN-SUFFIX,cip.cc,DIRECT
+  - DOMAIN-SUFFIX,ipip.net,DIRECT
+  - DOMAIN-SUFFIX,ip138.com,DIRECT
+  # 媒体刮削网站走代理 (TMDB, Fanart, Trakt 等)
+  - DOMAIN-SUFFIX,themoviedb.org,🚀 高速节点
+  - DOMAIN-SUFFIX,tmdb.org,🚀 高速节点
+  - DOMAIN-SUFFIX,tmdb.com,🚀 高速节点
+  - DOMAIN-SUFFIX,fanart.tv,🚀 高速节点
+  - DOMAIN-SUFFIX,trakt.tv,🚀 高速节点
+  - DOMAIN-SUFFIX,thetvdb.com,🚀 高速节点
+  - DOMAIN-SUFFIX,anidb.net,🚀 高速节点
+  - DOMAIN-SUFFIX,opensubtitles.org,🚀 高速节点
   - GEOSITE,youtube,🚀 高速节点
   - GEOSITE,google,🚀 高速节点
   - GEOSITE,github,🚀 高速节点
