@@ -61,9 +61,9 @@ http://tvbox.840120.xyz:36400/live/admin/iptv/92.m3u8
 http://tvbox.840120.xyz:36400/live/admin/iptv/97.m3u8
 #EXTINF:-1 tvg-chno="" tvg-id="8dce33d386e4d1579cfaa2710b48a5ad" tvg-name="河南卫视" tvg-logo="http://tvbox.840120.xyz:36400/logo-proxy/aHR0cDovL2VwZy41MXptdC50b3A6ODAwMC90YjEvd3MvaGVuYW4ucG5n/henan.png" group-title="地方卫视",河南卫视
 http://tvbox.840120.xyz:36400/live/admin/iptv/96.m3u8
-#EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="http://tvbox.840120.xyz:1905/logo-cache/9fca1dd949dc3ac7be35.png?v=1791147651153&from=source" catchup="none" group-title="香港卫视",凤凰资讯
-http://tvbox.840120.xyz:1905/fengshows-info.flv
-#EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="http://tvbox.840120.xyz:1905/logo-cache/17a2a0bdc9150400e64b.png?v=1791147651153&from=source" catchup="none" group-title="香港卫视",凤凰中文
-http://tvbox.840120.xyz:1905/fengshows-chinese.flv
-#EXTINF:-1 tvg-id="凤凰香港" tvg-name="凤凰香港" tvg-logo="http://tvbox.840120.xyz:1905/logo-cache/0ed1631cad44391e486c.png?v=1791147651153&from=source" catchup="none" group-title="香港卫视",凤凰香港
-http://tvbox.840120.xyz:1905/fengshows-hongkong.flv
+#EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="http://tvbox.840120.xyz:1905/840120/logo-cache/9fca1dd949dc3ac7be35.png?v=1792403899586&from=source" catchup="none" group-title="香港",凤凰资讯
+http://tvbox.840120.xyz:1905/840120/fengshows-info.flv
+#EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="http://tvbox.840120.xyz:1905/840120/logo-cache/17a2a0bdc9150400e64b.png?v=1792403899586&from=source" catchup="none" group-title="香港",凤凰中文
+http://tvbox.840120.xyz:1905/840120/fengshows-chinese.flv
+#EXTINF:-1 tvg-id="凤凰香港" tvg-name="凤凰香港" tvg-logo="http://tvbox.840120.xyz:1905/840120/logo-cache/0ed1631cad44391e486c.png?v=1792403899586&from=source" catchup="none" group-title="香港",凤凰香港
+http://tvbox.840120.xyz:1905/840120/fengshows-hongkong.flv
