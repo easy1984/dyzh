@@ -381,6 +381,16 @@ rules:
   - DOMAIN-SUFFIX,xunlei.com,DIRECT
   - DOMAIN-SUFFIX,xlmc.sandai.net,DIRECT
   - DOMAIN-KEYWORD,xunlei,DIRECT
+  # 国内主流网盘走直连 (115、百度、阿里、夸克、移动云盘等)
+  - DOMAIN-SUFFIX,115.com,DIRECT
+  - DOMAIN-SUFFIX,anxia.com,DIRECT
+  - DOMAIN-SUFFIX,baidupcs.com,DIRECT
+  - DOMAIN-SUFFIX,baidubce.com,DIRECT
+  - DOMAIN-SUFFIX,aliyundrive.com,DIRECT
+  - DOMAIN-SUFFIX,aliyuncs.com,DIRECT
+  - DOMAIN-SUFFIX,quark.cn,DIRECT
+  - DOMAIN-SUFFIX,caiyun.app.10086.cn,DIRECT
+  - DOMAIN-SUFFIX,139.com,DIRECT
   # 常用 IP 查询网站走直连
   - DOMAIN-SUFFIX,ip.sb,DIRECT
   - DOMAIN-SUFFIX,ipinfo.io,DIRECT
