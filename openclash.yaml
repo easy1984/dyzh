@@ -391,13 +391,13 @@ rules:
   - DOMAIN-SUFFIX,quark.cn,DIRECT
   - DOMAIN-SUFFIX,caiyun.app.10086.cn,DIRECT
   - DOMAIN-SUFFIX,139.com,DIRECT
-  # 常用 IP 查询网站走直连
-  - DOMAIN-SUFFIX,ip.sb,DIRECT
-  - DOMAIN-SUFFIX,ipinfo.io,DIRECT
-  - DOMAIN-SUFFIX,ip-api.com,DIRECT
-  - DOMAIN-SUFFIX,cip.cc,DIRECT
-  - DOMAIN-SUFFIX,ipip.net,DIRECT
-  - DOMAIN-SUFFIX,ip138.com,DIRECT
+  # IP 查询网站走代理
+  - DOMAIN-SUFFIX,ip.sb,🚀 高速节点
+  - DOMAIN-SUFFIX,ipinfo.io,🚀 高速节点
+  - DOMAIN-SUFFIX,ip-api.com,🚀 高速节点
+  - DOMAIN-SUFFIX,cip.cc,🚀 高速节点
+  - DOMAIN-SUFFIX,ipip.net,🚀 高速节点
+  - DOMAIN-SUFFIX,ip138.com,🚀 高速节点
   # 媒体刮削网站走代理 (TMDB, Fanart, Trakt 等)
   - DOMAIN-SUFFIX,themoviedb.org,🚀 高速节点
   - DOMAIN-SUFFIX,tmdb.org,🚀 高速节点
