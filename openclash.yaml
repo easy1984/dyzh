@@ -397,6 +397,9 @@ rules:
   - DOMAIN-SUFFIX,dockercloud.com,🚀 高速节点
   - DOMAIN-SUFFIX,docker.net,🚀 高速节点
   - DOMAIN-KEYWORD,docker,🚀 高速节点
+  # acgndog 走代理
+  - DOMAIN-SUFFIX,acgndog.com,🚀 高速节点
+  - DOMAIN-KEYWORD,acgndog,🚀 高速节点
   # IP 查询网站走代理
   - DOMAIN-SUFFIX,ip.sb,🚀 高速节点
   - DOMAIN-SUFFIX,ipinfo.io,🚀 高速节点
