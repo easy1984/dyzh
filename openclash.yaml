@@ -391,9 +391,11 @@ rules:
   - DOMAIN-SUFFIX,quark.cn,DIRECT
   - DOMAIN-SUFFIX,caiyun.app.10086.cn,DIRECT
   - DOMAIN-SUFFIX,139.com,DIRECT
-  # Docker Hub / 镜像仓库走代理
+  # Docker 相关服务走代理
   - DOMAIN-SUFFIX,docker.io,🚀 高速节点
   - DOMAIN-SUFFIX,docker.com,🚀 高速节点
+  - DOMAIN-SUFFIX,dockercloud.com,🚀 高速节点
+  - DOMAIN-SUFFIX,docker.net,🚀 高速节点
   - DOMAIN-KEYWORD,docker,🚀 高速节点
   # IP 查询网站走代理
   - DOMAIN-SUFFIX,ip.sb,🚀 高速节点
