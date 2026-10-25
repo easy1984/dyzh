@@ -4,14 +4,14 @@ allow-lan: true
 mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
-ipv6: false
+ipv6: true                  # 【已修改】全局 IPv6 已开启
 profile:
   store-selected: true
   store-fake-ip: true
 
 dns:
   enable: true
-  ipv6: false
+  ipv6: true                # 【已修改】DNS 解析 IPv6 已开启
   prefer-h3: true
   listen: 0.0.0.0:53
   enhanced-mode: fake-ip
@@ -24,6 +24,8 @@ dns:
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
+    - 2400:3200::1          # 【已添加】建议补充 IPv6 DNS 服务器
+    - 2400:3200:baba::1     # 【已添加】阿里云 IPv6 DNS
 
 proxies:
   - name: server ShadowTLS
@@ -385,6 +387,9 @@ rules:
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP6-CIDR,::1/128,DIRECT,no-resolve          # 【已添加】本地环回 IPv6 直连
+  - IP6-CIDR,fc00::/7,DIRECT,no-resolve         # 【已添加】唯一本地地址 (ULA) 直连
+  - IP6-CIDR,fe80::/10,DIRECT,no-resolve        # 【已添加】链路本地地址直连
   - GEOIP,private,DIRECT,no-resolve
   - GEOSITE,private,DIRECT
   - DOMAIN-SUFFIX,xunlei.com,DIRECT
