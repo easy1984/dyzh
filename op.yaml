@@ -1,0 +1,255 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+ipv6: true
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+dns:
+  enable: true
+  ipv6: true
+  prefer-h3: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+    - '*.lan'
+    - localhost.ptlogin2.qq.com
+    - '+.services.googleapis.cn'
+    - '+.googleapis.cn'
+    - '+.xn--ngstr-lra8j.com'
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 2400:3200::1
+    - 2400:3200:baba::1
+
+proxies:
+  - name: 高速Hysteria2-misaka
+    server: 91.213.174.63
+    port: 25582
+    down: ''
+    fingerprint: ''
+    obfs: ''
+    obfs-password: ''
+    password: a77793fe
+    skip-cert-verify: true
+    sni: www.bing.com
+    type: hysteria2
+    up: ''
+  - name: 高速🇯🇵 cloud xtls-reality
+    type: vless
+    server: 103.27.187.188
+    port: 8881
+    uuid: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    network: tcp
+    udp: true
+    tls: true
+    flow: xtls-rprx-vision
+    servername: addons.mozilla.org
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Ne43_vysuR0Q7yVUyiTt1DF4uPY-wiPv2qf6PYE62Xw
+      short-id: ''
+  - name: 高速🇯🇵 cloud hysteria2
+    type: hysteria2
+    server: 103.27.187.188
+    port: 8882
+    up: 200 Mbps
+    down: 1000 Mbps
+    password: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    sni: addons.mozilla.org
+    skip-cert-verify: false
+    fingerprint: 1C:57:5B:C9:0D:A6:A8:37:DA:D1:11:FF:49:06:96:F4:9E:57:67:6F:31:91:B3:35:8F:5D:81:98:5C:EF:A9:89
+  - name: 🇯🇵 cloud tuic
+    type: tuic
+    server: 103.27.187.188
+    port: 8883
+    uuid: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    password: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    alpn:
+      - h3
+    reduce-rtt: true
+    request-timeout: 8000
+    udp-relay-mode: native
+    congestion-controller: bbr
+    sni: addons.mozilla.org
+    skip-cert-verify: false
+    fingerprint: 1C:57:5B:C9:0D:A6:A8:37:DA:D1:11:FF:49:06:96:F4:9E:57:67:6F:31:91:B3:35:8F:5D:81:98:5C:EF:A9:89
+  - name: 🇯🇵 cloud ShadowTLS
+    type: ss
+    server: 103.27.187.188
+    port: 8884
+    cipher: 2022-blake3-aes-128-gcm
+    password: CQbHR0v2wSaC4+Zu8KNpNA==
+    plugin: shadow-tls
+    client-fingerprint: chrome
+    plugin-opts:
+      host: addons.mozilla.org
+      password: 9c987a30-e7f7-4b87-92de-57057bfa866c
+      version: 3
+  - name: 🇯🇵 cloud shadowsocks
+    type: ss
+    server: 103.27.187.188
+    port: 8885
+    cipher: 2022-blake3-aes-128-gcm
+    password: CQbHR0v2wSaC4+Zu8KNpNA==
+  - name: 🇯🇵 cloud trojan
+    type: trojan
+    server: 103.27.187.188
+    port: 8886
+    password: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    client-fingerprint: chrome
+    sni: addons.mozilla.org
+    skip-cert-verify: false
+    fingerprint: 1C:57:5B:C9:0D:A6:A8:37:DA:D1:11:FF:49:06:96:F4:9E:57:67:6F:31:91:B3:35:8F:5D:81:98:5C:EF:A9:89
+  - name: 🇯🇵 cloud vmess-ws
+    type: vmess
+    server: skk.moe
+    port: 80
+    uuid: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    udp: true
+    tls: false
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+      path: /9c987a30-e7f7-4b87-92de-57057bfa866c-vmess
+      headers:
+        Host: besides-linear-recognized-hamburg.trycloudflare.com
+  - name: 🇯🇵 cloud vless-ws-tls
+    type: vless
+    server: skk.moe
+    port: 443
+    uuid: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    udp: true
+    tls: true
+    servername: besides-linear-recognized-hamburg.trycloudflare.com
+    network: ws
+    skip-cert-verify: false
+    ws-opts:
+      path: /9c987a30-e7f7-4b87-92de-57057bfa866c-vless
+      headers:
+        Host: besides-linear-recognized-hamburg.trycloudflare.com
+      max-early-data: 2560
+      early-data-header-name: Sec-WebSocket-Protocol
+  - name: 🇯🇵 cloud h2-reality
+    type: vless
+    server: 103.27.187.188
+    port: 8889
+    uuid: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    network: http
+    tls: true
+    servername: addons.mozilla.org
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Ne43_vysuR0Q7yVUyiTt1DF4uPY-wiPv2qf6PYE62Xw
+      short-id: ''
+  - name: 🇯🇵 cloud grpc-reality
+    type: vless
+    server: 103.27.187.188
+    port: 8890
+    uuid: 9c987a30-e7f7-4b87-92de-57057bfa866c
+    network: grpc
+    tls: true
+    udp: true
+    client-fingerprint: chrome
+    servername: addons.mozilla.org
+    grpc-opts:
+      grpc-service-name: grpc
+    reality-opts:
+      public-key: Ne43_vysuR0Q7yVUyiTt1DF4uPY-wiPv2qf6PYE62Xw
+      short-id: ''
+
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - 🚀 高速节点
+      - ♻️ 自动选择
+      - 🚀 手动切换
+      - DIRECT
+  - name: 🚀 手动切换
+    type: select
+    proxies:
+      - 高速Hysteria2-misaka
+      - 高速🇯🇵 cloud xtls-reality
+      - 高速🇯🇵 cloud hysteria2
+      - 🇯🇵 cloud tuic
+      - 🇯🇵 cloud ShadowTLS
+      - 🇯🇵 cloud shadowsocks
+      - 🇯🇵 cloud trojan
+      - 🇯🇵 cloud vmess-ws
+      - 🇯🇵 cloud vless-ws-tls
+      - 🇯🇵 cloud h2-reality
+      - 🇯🇵 cloud grpc-reality
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 100
+    proxies:
+      - 高速Hysteria2-misaka
+      - 高速🇯🇵 cloud xtls-reality
+      - 高速🇯🇵 cloud hysteria2
+      - 🇯🇵 cloud tuic
+      - 🇯🇵 cloud ShadowTLS
+      - 🇯🇵 cloud shadowsocks
+      - 🇯🇵 cloud trojan
+      - 🇯🇵 cloud vmess-ws
+      - 🇯🇵 cloud vless-ws-tls
+      - 🇯🇵 cloud h2-reality
+      - 🇯🇵 cloud grpc-reality
+  - name: 🚀 高速节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 60
+    tolerance: 50
+    proxies:
+      - 高速Hysteria2-misaka
+      - 高速🇯🇵 cloud xtls-reality
+      - 高速🇯🇵 cloud hysteria2
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🚀 高速节点
+      - ♻️ 自动选择
+      - 🚀 手动切换
+      - DIRECT
+
+rules:
+  # --- 新增的局域网与内网直连规则 ---
+  - DOMAIN-SUFFIX,local,DIRECT
+  - DOMAIN-SUFFIX,lan,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - GEOIP,private,DIRECT,no-resolve
+  - GEOSITE,private,DIRECT
+  - DOMAIN-SUFFIX,xunlei.com,DIRECT
+  - DOMAIN-SUFFIX,xlmc.sandai.net,DIRECT
+  - DOMAIN-KEYWORD,xunlei,DIRECT
+  - DOMAIN-SUFFIX,115.com,DIRECT
+  - DOMAIN-SUFFIX,anxia.com,DIRECT
+  - DOMAIN-SUFFIX,baidupcs.com,DIRECT
+  - DOMAIN-SUFFIX,baidubce.com,DIRECT
+  - DOMAIN-SUFFIX,aliyundrive.com,DIRECT
+  - DOMAIN-SUFFIX,aliyuncs.com,DIRECT
+  - DOMAIN-SUFFIX,quark.cn,DIRECT
+  - DOMAIN-SUFFIX,caiyun.app.10086.cn,DIRECT
+  - DOMAIN-SUFFIX,139.com,DIRECT
+  - GEOSITE,youtube,🚀 高速节点
+  - GEOSITE,google,🚀 高速节点
+  - GEOSITE,github,🚀 高速节点
+  - DOMAIN-SUFFIX,githubusercontent.com,🚀 高速节点
+  - GEOSITE,telegram,🚀 高速节点
+  - GEOIP,telegram,🚀 高速节点,no-resolve
+  - GEOSITE,category-ai-!cn,🚀 高速节点
+  - GEOIP,cn,DIRECT,no-resolve
+  - MATCH,🐟 漏网之鱼
